@@ -1,0 +1,176 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Same styling on every page */
+header {
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(49, 45, 45);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+.links {
+    margin-left: 50px;
+}
+
+.links a {
+    display: inline-block;
+    padding: 20px;
+    color: white;
+}
+
+.button {
+    display: inline-block;
+    background-color: rgb(45, 45, 118);
+    height: 40px;
+    width: 120px;
+    margin-left: 650px;
+    text-align: center;
+}
+
+.button a {
+    display: inline-block;
+    padding: 9px;
+    color: white;
+    font-size: 17px;
+}
+
+/* Home page styling */
+.back2 {
+    background-color: #000;
+}
+
+.heading {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 25px;
+    width: 700px;
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    top: 210px;
+    left: 320px;
+}
+
+h3 {
+    position: relative;
+    top: 160px;
+    left: 320px;
+    font-family: cursive;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.tutor {
+    display: flex;
+    margin-left: 115px;
+    margin-bottom: 100px;
+}
+
+.tutor1 {
+    display: flex;
+    margin-left: 115px;
+    margin-bottom: 80px;
+}
+
+.tutor .child {
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 345px;
+    width: 300px;
+    margin-left: 50px;
+    background-color: rgb(104, 81, 92);
+    margin-top: 100px;
+}
+
+.tutor1 .child {
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 345px;
+    width: 300px;
+    margin-left: 50px;
+    background-color: rgb(104, 81, 92);
+}
+
+.child img {
+    height: 200px;
+    width: 298px;
+    border-radius: 50px;
+}
+
+p {
+    margin-left: 70px;
+    color: white;
+    font-size: 30px;
+}
+
+ol {
+    margin-left: 100px;
+    color: white;
+    font-size: 23px;
+}
+
+/* About page styling */
+table {
+    margin-top: 60px;
+    margin-left: 130px;
+    margin-bottom: 60px;
+}
+
+td {
+    color: white;
+}
+
+tr,
+th,
+td {
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    padding-right: 130px;
+}
+
+/* Contact page styling */
+form {
+    font-size: 25px;
+    margin-left: 70px;
+    margin-top: 30px;
+    color: white;
+}
+
+.parent {
+    display: flex;
+}
+
+/* Gallery page styling */
+#images img {
+    margin-top: 50px;
+    height: 250px;
+    width: 300px;
+    border-radius: 50%;
+    margin-left: 23px;
+}
+
+ul {
+    margin-top: 20px;
+    margin-left: 25px;
+    color: white;
+    font-size: 20px;
+}
+
+ul li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 22px;
+}
