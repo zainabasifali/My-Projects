@@ -1,0 +1,60 @@
+﻿@model MyProject.Models.LoginViewModel
+
+<style>
+    /* CSS styles for the blue div box */
+    .blue-box {
+        background-color: lightblue; /* Set background color to blue */
+        color: black; /* Set text color to white */
+        padding: 20px; /* Add padding to create space inside the box */
+        width: full; /* Set width of the box */
+        text-align: center; /* Center-align text */
+    }
+</style>
+
+<div class="blue-box">
+    <h2>Login</h2>
+</div>
+
+<form asp-action="Login">
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group position-relative">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" type="password" class="form-control" id="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <i class="fa fa-eye position-absolute" style="right: 10px; top: 35px; cursor: pointer;" onclick="togglePasswordVisibility('Password', this)"></i>
+    </div>
+    <br /> <br />
+    <div class="form-group" style="text-align: center;">
+        <input type="submit" value="Log in" class="btn btn-primary" />
+    </div>
+    <div class="form-group">
+        <span asp-validation-summary="ModelOnly" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="text-align: center;text-decoration: underline">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Register">Are you a new User??</a>
+        </div>
+</form>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function togglePasswordVisibility(fieldId, icon) {
+            var field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
+    
+}
+

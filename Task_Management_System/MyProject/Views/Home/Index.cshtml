@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    
+    .cover {
+        background-color: lightblue; 
+        color: black; 
+        padding: 20px; 
+        width: full; 
+        text-align: center; 
+    }
+</style>
+
+
+
+<header class="cover">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-lightblue border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Welcome</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between align-items-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Tasks" asp-action="Index"></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div style="display: flex; margin-top: 90px;"  class="text-center">
+    <div ><h1 class="display-4" style="margin-top: 35px">Task Management System</h1>
+    <br />
+    <h3 style="margin-top: 30px">By</h3>
+       <br />
+    <h3 style="color: blue;margin-top: 35px">Zainab Asif 2280134</h3>
+   </div>
+    <div><img src="https://img.freepik.com/free-vector/time-management-marketers-teamwork_335657-3008.jpg" alt="Loading...." /></div>
+    <br/>
+
+</div>
+<br />
+<div class="form-group text-center">
+    <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Tasks" asp-action="Index">View Your Tasks Here</a>
+</div>

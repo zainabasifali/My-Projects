@@ -1,0 +1,73 @@
+﻿@model MyProject.Models.Register
+
+
+
+
+<style>
+    
+    .blue-box {
+        background-color: lightblue; 
+        color: black; 
+        padding: 20px; 
+        width: full; 
+        text-align: center; 
+    }
+</style>
+
+<div class="blue-box">
+    <h2>Register</h2>
+</div>
+
+
+<form asp-action="Register">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dob" class="control-label"></label>
+        <input asp-for="Dob" class="form-control" />
+        <span asp-validation-for="Dob" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group position-relative">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" type="password" class="form-control" id="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <i class="fa fa-eye position-absolute" style="right: 10px; top: 35px; cursor: pointer;" onclick="togglePasswordVisibility('Password', this)"></i>
+    </div>
+    <div class="form-group position-relative">
+        <label asp-for="ConfirmPassword" class="control-label"></label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" id="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        <i class="fa fa-eye position-absolute" style="right: 10px; top: 35px; cursor: pointer;" onclick="togglePasswordVisibility('ConfirmPassword', this)"></i>
+    </div>
+    <br />
+    <br />
+    <div class="form-group" style="text-align: center;">
+        <input type="submit" value="Register" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function togglePasswordVisibility(fieldId, icon) {
+            var field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
+}
