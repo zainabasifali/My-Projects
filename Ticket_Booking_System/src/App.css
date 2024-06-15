@@ -1,0 +1,22 @@
+/* *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.App{
+  background-image: url('../public/back.jpg');
+  background-color: rgba(0, 0, 0, 0.612);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-blend-mode: overlay;
+}
+
+.App h1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vmin);
+}
+ */

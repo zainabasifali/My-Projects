@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.BackgroundImage{
+    height: 600px;
+    width: 100%;
+    background-image: url('../../../public/Header.jpg');
+    background-color: rgba(0, 0, 0, 0.712);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+.BackgroundImage h1{
+    color: white;
+    text-align: center;
+    padding-top: 170px;
+    font-size: 40px;
+}

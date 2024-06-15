@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    background-color: black;
+}
+nav li{
+    display: inline-block;
+    padding: 20px;
+    margin-left: 20px;
+}
+nav li a:hover{
+    color: red;
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+.admin:last-child{
+    margin-left: 720px;
+}
+.user:last-child{
+    margin-left: 730px;
+}
+.Main:nth-child(3){
+    margin-left: 900px;
+}

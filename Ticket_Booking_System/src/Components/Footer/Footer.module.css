@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.Footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.Footer img {
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+}
+
+.Main {
+    display: flex;
+}
+
+.child {
+    margin-top: 15px;
+    width: 320px;
+    margin-left: 15px;
+}
+
+.child li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.child p {
+    color: rgb(196, 69, 69);
+}
+
+.Footer p {
+    padding: 8px;
+}
