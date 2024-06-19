@@ -1,2 +1,2 @@
 # SZABIST
-All the projects of SZABIST university are here
+All the projects are developed by me.
