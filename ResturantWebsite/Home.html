@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./aos-master/dist/aos.css">
+  <script src="./aos-master/dist/aos.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="./Home.html">Home</a>
+    <a href="./Menu.html">Menu</a>
+    <a href="./Aboutus.html">AboutUs</a>
+    <a href="./Contact.html">Contact</a>
+    <a href="./Gallery.html">Gallery</a>
+    <button>Reservation</button>
+  </nav>
+
+  <!-- Slider and Header -->
+  <div class="slideshow-container">
+    <div data-aos="fade-up">
+      <div class="mySlides fade">
+        <img src="./Images/slider1.jpg">
+        <div class="overlay"></div>
+        <header>
+          <h1>Tasty Trests</h1>
+          <p>Where Flavor Fest Rests and Hunger’s Bigger Quests!</p>
+          <button><a href="./Menu.html">View Menu</a></button>
+        </header>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./Images/slider2.jpg">
+      <div class="overlay"></div>
+      <header>
+        <h1>Tasty Trests</h1>
+        <p>Where Flavor Fest Rests and Hunger’s Bigger Quests!</p>
+        <button><a href="./Menu.html">View Menu</a></button>
+      </header>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./Images/slider3.jpg">
+      <div class="overlay"></div>
+      <header>
+        <h1>Tasty Trests</h1>
+        <p>Where Flavor Fest Rests and Hunger’s Bigger Quests!</p>
+        <button><a href="./Menu.html">View Menu</a></button>
+      </header>
+    </div>
+
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <!-- Featured Dishes -->
+  <div data-aos="fade-up">
+    <h2>Featured Dishes</h2>
+    <div class="parent">
+      <div class="child">
+        <img src="./Images/clubsandwich.jpg" alt="">
+        <p>1000Rs</p>
+        <p id="dishname">Club Sandwitch</p>
+      </div>
+      <div class="child">
+        <img src="./Images/waffles.jpg" alt="">
+        <p>600Rs</p>
+        <p id="dishname">Chocolate Waffles</p>
+      </div>
+      <div class="child">
+        <img src="./Images/karhai.jpg" alt="">
+        <p>1200Rs</p>
+        <p id="dishname">Chicken Karhai</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Reviews -->
+  <div data-aos="fade-up">
+    <h2>Customer Reviews</h2>
+    <div class="mainreviews">
+      <div class="one">
+        <p>This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful
+          presentation, a wide wine list, and wonderful dessert.</p>
+        <span>---Lores Emiden---</span>
+      </div>
+      <div class="two">
+        <p>Do yourself a favor and visit this lovely restaurant in [City Name]. The service is unmatched. <br>The staff
+          truly cares about your experience. <br>The food is absolutely amazing – everything we tasted melted in our
+          mouths. Absolutely the best meal we had while in [City Name].</p>
+        <span>---Lores Emiden---</span>
+      </div>
+      <div class="three">
+        <p>It’s a great experience. The ambiance is very welcoming and charming. Amazing wines, food, and service. <br>
+          The staff is extremely knowledgeable and makes great recommendations.</p>
+        <span>---Lores Emiden---</span>
+      </div>
+      <div class="one">
+        <p>This place is great! <br> The atmosphere is chill and cool, and the staff is also really friendly. They know
+          what they’re doing.</p>
+        <span>---Lores Emiden---</span>
+      </div>
+      <div class="three">
+        <p>Do yourself a favor and visit this lovely restaurant in [City Name]. The service is unmatched. <br>The staff
+          truly cares about your experience. The food is absolutely amazing.</p>
+        <span>---Lores Emiden---</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p id="style">Tasty Trests</p>
+    <p>Where Flavor Fest Rests and Hunger’s Bigger Quests!</p>
+    <a href=""><img src="./Images/facebook.jpg" alt=""></a>
+    <a href=""><img src="./Images/instagram.png" alt=""></a>
+    <a href=""><img src="./Images/whatsapp.png" alt=""></a>
+    <hr>
+    <span>Copyright © 2024 TastyTrests Restaurant | powered by TastyTrests Restaurant</span>
+  </footer>
+
+</body>
+<script>
+  // For Animation using AOS Library 
+  AOS.init();
+
+  // Slider Javascript
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2000);
+  }
+
+</script>
+
+</html>
