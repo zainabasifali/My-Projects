@@ -1,0 +1,470 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('../../../public/Merriweather-Bold.ttf');
+}
+
+body {
+    background-color: #494b58;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 50px;
+    color: white;
+    font-family: myFirstFont;
+    text-align: center;
+}
+
+.Container {
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: space-around;
+    background-color: rgba(194, 197, 155, 0.69);
+    width: 100%;
+    height: 580px;
+
+}
+
+.Container .ContainerChild1 {
+    text-align: center;
+    border-radius: 50px;
+    margin-top: 130px;
+    margin-left: 55px;
+    width: 43vw;
+}
+
+.Container .ContainerChild1 h1 {
+    width: 750px;
+    font-family: myFirstFont;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 3px;
+}
+
+.Container .ContainerChild1 button {
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 170px;
+    font-size: 18px;
+    height: 60px;
+    width: 230px;
+}
+
+.Container1 {
+    display: flex;
+    margin-bottom: 80px;
+    background-color: rgba(194, 197, 155, 0.69);
+    justify-content: space-around;
+    width: 100vw;
+    height: 580px;
+
+}
+
+
+.Container1 .ContainerChild1 {
+    text-align: center;
+    border-radius: 50px;
+    margin-top: 135px;
+    width: 43vw;
+}
+
+.Container1 .ContainerChild1 h1 {
+    width: 600px;
+    font-family: myFirstFont;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 3px;
+}
+
+.Container1 .ContainerChild1 button {
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 18px;
+    height: 60px;
+    width: 250px;
+}
+
+.ContainerChild2 {
+    width: 50%;
+}
+
+.ContainerChild2 img {
+    margin-top: 34px;
+    width: 810px;
+    height: 480px;
+    animation: moveAndScale 5s ease-in-out infinite;
+}
+
+@keyframes moveAndScale {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+
+    50% {
+        transform: translateX(50px) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
+
+.Container1 .ContainerChild2 img {
+    margin-top: -14px;
+    margin-left: 0px;
+    width: 850px;
+    height: 540px;
+}
+
+.ContainerChild2 #slider2 {
+    margin-top: -34px;
+    margin-left: 20px;
+    width: 810px;
+    height: 550px;
+}
+
+.Types {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.Types .TypesChild {
+    margin-top: 150px;
+    background-color: rgba(194, 197, 155, 0.69);
+    height: 450px;
+    width: 40%;
+    text-align: center;
+}
+
+.Types .TypesChild img {
+    width: 500px;
+    height: 500px;
+    margin-top: -100px;
+}
+
+.Types .TypesChild button {
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 20px;
+    font-size: 17px;
+    height: 60px;
+    width: 200px;
+}
+
+.FeaturedProducts {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.FeaturedProducts div {
+    background-color: white;
+    margin: 20px 0px 0px 0px;
+    transition: transform 0.6s, opacity 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.FeaturedProducts div img {
+    height: 400px;
+    width: 537px;
+    z-index: 1;
+}
+
+.FeaturedProducts div:hover {
+    overflow: hidden;
+}
+
+.FeaturedProducts div:hover .addtocart {
+    display: block;
+}
+
+.FeaturedProducts div:hover img {
+    transform: scale(1.03);
+}
+
+.FeaturedProducts div p {
+    text-align: center;
+}
+
+.FeaturedProducts div p:nth-of-type(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.FeaturedProducts div p:nth-of-type(2) {
+    margin-bottom: 10px;
+}
+
+.addtocart {
+    position: relative;
+    display: none;
+    margin-top: -28px;
+    z-index: 2;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    height: 30px;
+    background-color: black;
+    width: 537px;
+
+}
+
+.CustomerReviews {
+    height: 210px;
+    padding-top: 20px;
+    margin-top: 60px;
+    background-position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.CustomerReviews div {
+    background-color: white;
+    height: 125px;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 25px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.CustomerReviews #name {
+    position: relative;
+    top: -25px;
+    text-align: center;
+    margin: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.CustomerReviews #des {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.CustomerReviews img {
+    position: relative;
+    display: block;
+    margin: -35px 0px 0px 290px;
+    height: 70px;
+}
+
+/* Media Queries for making it responsive */
+@media (max-width: 1349px) {
+    .CustomerReviews img {
+        left: -100px;
+    }
+
+    .CustomerReviews div {
+        height: 150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .CustomerReviews {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .CustomerReviews div {
+        height: 110px;
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .CustomerReviews {
+        height: auto;
+    }
+
+    .CustomerReviews div {
+        width: 90%;
+    }
+
+    .CustomerReviews img {
+        height: 60px;
+    }
+
+    .CustomerReviews #name,
+    .CustomerReviews #des {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (min-width:1024px) and (max-width:1349px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .Container .ContainerChild1 {
+        margin-left: 33px
+    }
+
+    .Container .ContainerChild1 h1 {
+        font-size: 70px;
+        width: 650px
+    }
+
+    .Container1 .ContainerChild1 {
+        margin-left: 0px;
+    }
+
+    .Container1 .ContainerChild2 img {
+        width: 670px;
+        margin-left: 80px;
+    }
+
+    .Container1 .ContainerChild1 h1 {
+        font-size: 70px;
+    }
+
+    .Container .ContainerChild1 button {
+        margin-left: 200px;
+    }
+
+}
+
+@media (min-width:568px) and (max-width:785px) {
+    .Container1 {
+        margin-left: 0px;
+        text-align: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Container1 .ContainerChild2 img {
+        margin: auto;
+        position: relative;
+        right: 50px;
+    }
+
+    .Container .ContainerChild2 img {
+        margin-left: -70px;
+    }
+
+    .Container #slider2 {
+        position: relative;
+        right: 120px;
+    }
+
+    .Container .ContainerChild1 h1 {
+        margin-left: -20px;
+        width: 500px;
+    }
+
+    .Container1 .ContainerChild1 h1 {
+        margin-left: 0px;
+    }
+
+    .Container1 button {
+        margin-left: 170px;
+    }
+
+    .Container button {
+        position: relative;
+        left: -40px;
+    }
+
+    .Container {
+        margin-left: 0px;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+
+    }
+
+}
+
+@media (min-width:568px) and (max-width:1023px) {
+    body {
+        margin: auto;
+    }
+
+    .ContainerChild2 img {
+        animation: none;
+    }
+
+    .Types {
+        flex-direction: column;
+        align-items: center;
+        margin-left: -190px;
+    }
+
+    .FeaturedProducts {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width:786px) and (max-width:1023px) {
+    .Types {
+        margin-left: -140px;
+    }
+
+    .Container1 {
+        margin-left: 0px;
+        text-align: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Container1 .ContainerChild2 img {
+        margin: auto;
+        position: relative;
+        right: -50px;
+    }
+
+    .Container .ContainerChild2 img {
+        margin-left: 40px;
+    }
+
+    .Container .ContainerChild1 h1 {
+        margin-left: 20px;
+        width: 600px;
+    }
+
+    .Container1 .ContainerChild1 h1 {
+        margin-left: 100px;
+    }
+
+    .Container1 button {
+        margin-left: 260px;
+    }
+
+    .Container button {
+        position: relative;
+        left: 40px;
+    }
+
+    .Container {
+        margin-left: 0px;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+
+    }
+
+
+
+}
+
+@media (min-width:1207px) and (max-width:1349px) {
+    .Container .ContainerChild1 button {
+        margin-left: 230px;
+    }
+}

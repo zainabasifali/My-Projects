@@ -1,0 +1,80 @@
+.addtocartmain table {
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .4);
+    padding: 20px;
+    margin: 30px;
+    margin-left: 210px;
+}
+
+.addtocartmain table tr {
+    height: 20px;
+}
+
+.addtocartmain table th {
+    padding: 20px;
+    font-size: 17px
+}
+
+.addtocartmain table td {
+    padding-left: 20px;
+    font-size: 17px;
+
+}
+
+.addtocartmain table td:nth-of-type(1) img {
+    height: 40px;
+    width: 40px;
+}
+
+.addtocartmain table td:nth-of-type(2) img {
+    height: 150px;
+    width: 150px;
+}
+
+.addtocartmain table td:nth-of-type(3) {
+    font-weight: bold;
+}
+
+.addtocartmain table td:nth-of-type(3) p {
+    font-weight: lighter;
+}
+
+.addtocartmain table .checkoutContainer {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.addtocartmain table .checkout {
+    padding: 15px;
+    width: 160px;
+    display: inline-block;
+}
+
+.addtocartmain table .totalContainer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.addtocartmain table td:nth-of-type(5) button {
+    height: 25px;
+    width: 100px;
+    font-size: 17px;
+}
+
+.addtocartmain table input {
+    text-align: center;
+    height: 25px;
+    width: 100px;
+
+}
+
+/* Media Queries for making it responsive */
+@media (min-width:568px) and (max-width:1349px) {
+    .addtocartmain table {
+        margin: auto;
+        margin-left: 0px;
+    }
+}

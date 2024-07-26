@@ -1,0 +1,264 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 270px;
+    background-color: white;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .4);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.sidebar input {
+    border: 1px solid #ccc;
+    margin: 50px 0px 15px 0px;
+    padding: 10px;
+    width: 230px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sidebar p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar a {
+    cursor: pointer;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 0;
+    margin-left: 10px;
+}
+
+.sidebar select {
+    width: 230px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.sidebar .button {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+}
+
+.sidebar .button:hover {
+    background-color: #555;
+}
+
+.sidebar .button img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.sidebar .button:focus {
+    outline: none;
+}
+
+.sidebar .button:focus img {
+    filter: brightness(0) invert(1);
+}
+
+.button {
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 17px;
+    height: 25px;
+    width: 25px;
+}
+
+.TshirtsContainer {
+    margin-top: 10px;
+}
+
+.TshirtsMain {
+    display: flex;
+    justify-content: space-around;
+}
+
+.TshirtsMain .TshirtsMainChild {
+    margin: 20px 0px 20px 0px;
+    transition: transform 0.6s, opacity 0.1s;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .4);
+}
+
+.TshirtsMain .TshirtsMainChild img {
+    height: 250px;
+    width: 300px;
+    z-index: 1;
+}
+
+.TshirtsMainChild:hover .addtocart {
+    cursor: pointer;
+    display: block;
+}
+
+.TshirtsMainChild:hover img {
+    transform: scale(1.03);
+}
+
+.TshirtsMain .TshirtsMainChild p {
+    text-align: center;
+}
+
+.TshirtsMain .TshirtsMainChild p:nth-of-type(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.TshirtsMain .TshirtsMainChild p:nth-of-type(2) {
+    margin-bottom: 10px;
+}
+
+.addtocart {
+    position: relative;
+    display: none;
+    margin-top: -30px;
+    z-index: 2;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    height: 30px;
+    background-color: black;
+    width: 300px;
+
+}
+
+.productdes {
+    overflow: scroll;
+    position: fixed;
+    top: 15%;
+    left: 22%;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .4);
+    height: 480px;
+    width: 60%;
+}
+
+.productdes #cross {
+    position: fixed;
+    height: 38px;
+    right: 10px;
+    margin-top: 15px;
+}
+
+.productdes .Parent {
+    display: flex;
+    padding-top: 50px;
+
+}
+
+.productdes .Parent .Child {
+    width: 50%;
+}
+
+.productdes .Parent .Child img {
+    height: calc(76%);
+    width: calc(95%);
+    margin: 20px;
+
+}
+
+.productdes .Parent .Child:nth-of-type(2) {
+    width: calc(50%);
+    padding: 20px;
+}
+
+.productdes .Parent .Child .type {
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+.productdes .Parent .Child p {
+    margin: 8px;
+}
+
+.productdes .Parent .Child .amount {
+    color: grey;
+    font-size: 25px;
+}
+
+.productdes .Parent .Child .des {
+    font-size: 20px;
+}
+
+.productdes .Parent .Child button {
+    margin: 5px;
+    margin-top: 25px;
+    height: 25px;
+    width: calc(29%);
+    font-size: 17px;
+}
+
+.productdes .Parent .Child input {
+    text-align: center;
+    height: 25px;
+    width: calc(29%);
+    font-size: 17px;
+}
+
+.productdes .Parent .Child .addtocartbut {
+    width: calc(91%);
+    height: 30px;
+    font-size: 17px;
+
+}
+
+/* Media Queries for making it responsive */
+@media (min-width:768px) and (max-width:1023px) {
+    .TshirtsMain .TshirtsMainChild {
+        width: 250px;
+    }
+
+}
+
+@media (min-width:568px) and (max-width:768px) {
+    .TshirtsMain {
+        margin: auto;
+        width: fit-content;
+        flex-direction: column;
+    }
+}
