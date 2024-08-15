@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./aos-master/dist/aos.css">
+    <script src="./aos-master/dist/aos.js"></script>
+    <style>
+        @media (max-width:850px) {
+            .container-fluid .row {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .col {
+                margin-bottom: 10px;
+
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: white;">
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <img src="./Images/tb.png" class="img-fluid" style="height: 50px;width: 50px;margin-right: 10px;" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link active" aria-current="page"
+                            href="./Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link" href="./Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            style="font-size: 18px;">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./Careers.html">Careers</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./Profile.html">Profile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form>
+                    <a href="./Login.html">
+                        <button type="button" class="btn btn-primary btn-med"
+                            style="font-size: 18px;padding-left: 2.5rem; padding-right: 2.5rem; background-color: black;">
+                            Logout
+                        </button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Section of Career -->
+    <div class="container-fluid p-4" style="color:black;text-align:center;background-color: #74b1e6;">
+        <div class="row d-flex">
+            <div class="col" style="margin-top: 70px;margin-left: 30px;">
+                <h2 style="font-size: 55px;margin-bottom: 30px;color: white;font-weight: 700;" data-aos="fade-right">
+                    SHAPE YOUR CAREER</h2>
+                <input type="text" placeholder="Title of the job?" style="width: 48%;height: 50px;padding: 10px;" />
+                <input type="text" placeholder="Country?" style="width: 48%;height: 50px;padding: 10px;" />
+                <a href="./Login.html">
+                    <button type="button" class="btn btn-primary btn-med"
+                        style="font-size: 18px;height: 45px;padding-left: 4rem; padding-right: 4rem; background-color: black;color: white;margin: 30px 0px 0px 0px;font-size: 20px;animation: example 1s infinite;">
+                        Search Jobs
+                    </button>
+                </a>
+            </div>
+            <div class="col" data-aos="fade-right">
+                <img src="./Images/careers.jpg" class="img-fluid" style="margin-left: 30px;width: 85%;height: 350px;" />
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hiring Section -->
+    <div class="container-fluid p-4" style="color:black;margin-bottom: 70px;">
+        <div class="row">
+            <h2 style="font-size: 45px;text-align: center;margin: 40px 0px 30px 0px;color: rgb(56, 50, 107);"
+                data-aos="fade-right">WE ARE
+                HIRING</h2>
+
+            <div class="col" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;padding: 30px;"
+                data-aos="flip-right">
+                <p>07/12/24 <br> Pakistan</p>
+                <h3>Software Engineer</h3>
+                <a href="./Description.html">
+                    <button type="button" class="btn btn-primary btn-med"
+                        style="font-size: 18px;height: 45px;padding-left: 4rem; padding-right: 4rem;background-color: black;margin: 30px 0px 0px 0px;font-size: 20px;">
+                        Apply Now
+                    </button>
+                </a>
+            </div>
+            <div class="col" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;padding: 30px;"
+                data-aos="flip-right">
+                <p>07/12/24 <br> Pakistan</p>
+                <h3>Graphic Designer</h3>
+                <a href="./Description.html">
+                    <button type="button" class="btn btn-primary btn-med"
+                        style="font-size: 18px;height: 45px;padding-left: 4rem; padding-right: 4rem;background-color: black;margin: 30px 0px 0px 0px;font-size: 20px;">
+                        Apply Now
+                    </button>
+                </a>
+            </div>
+            <div class="col" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;padding: 30px;"
+                data-aos="flip-right">
+                <p>07/12/24 <br> Pakistan</p>
+                <h3>Android Developer</h3>
+                <a href="./Description.html">
+                    <button type="button" class="btn btn-primary btn-med"
+                        style="font-size: 18px;height: 45px;padding-left: 4rem; padding-right: 4rem;background-color: black;margin: 30px 0px 0px 0px;font-size: 20px;">
+                        Apply Now
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Company Culture and Benefits Carousal -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000"
+        style="margin-bottom: 70px;">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" style="text-align: center;">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col" style="padding: 30px;padding-top: 15px;height: 320px;">
+                        <p style="font-size: 22px;">At our company, we prioritize employee well-being with comprehensive
+                            benefits. We offer health insurance, 401(k) contributions, generous paid time off, and life
+                            and disability insurance. <br> Our wellness programs, flexible work arrangements, and
+                            professional development opportunities, including tuition reimbursement, support work-life
+                            balance and career growth. <br> Additionally, we provide stock options, commuter subsidies,
+                            childcare assistance, and employee discounts.</p>
+                    </div>
+                    <div class="col">
+                        <img src="./Images/benefits.jpg" class="img-fluid" style="height: 320px;width: 98%;" />
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col" style="padding: 30px;padding-top: 15px;height: 320px;">
+                        <p style="font-size: 22px;">At our company, we prioritize employee well-being with comprehensive
+                            benefits. We offer health insurance, 401(k) contributions, generous paid time off, and life
+                            and disability insurance. <br> Our wellness programs, flexible work arrangements, and
+                            professional development opportunities, including tuition reimbursement, support work-life
+                            balance and career growth. <br> Additionally, we provide stock options, commuter subsidies,
+                            childcare assistance, and employee discounts.</p>
+                    </div>
+                    <div class="col">
+                        <img src="./Images/culture.jpg" class="img-fluid" style="height: 320px;width: 650px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+        </a>
+    </div>
+
+
+    <!-- More Jobs Section -->
+    <div class="container-fluid p-4 careers"
+        style="color:black;background-image: url('./Images/growth.png');background-repeat: no-repeat;background-size: cover;background-position: center;"
+        data-aos="zoom-in-up">
+        <div class="row">
+            <div class="col" style="text-align: right;margin-right: 100px;">
+                <h2 style="font-size: 50px;color:rgb(56, 50, 107);margin-top: 30px;">JOIN OUR TEAM</h2>
+                <a href="./Login.html">
+                    <button type="button" class="btn btn-primary btn-med"
+                        style="font-size: 18px;height: 45px;padding-left: 3rem; padding-right: 3rem;background-color: black;margin: 10px 0px 0px 0px;font-size: 20px;">
+                        View All Jobs
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-body-tertiary text-center" style="font-size: 20px;margin-top: 50px;background-color: #eaeef3;">
+        <div class="container p-4 pb-0">
+            <section class="">
+                <form action="">
+                    <div class="row d-flex">
+                        <div class="col">
+                            <p class="pt-1">
+                                Enter Your Email Address Here:
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="form5Example26" class="form-control" />
+                                <label class="form-label" for="form5Example26">Email address</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-3"
+                                style="background-color: black;font-size: 18px;margin-top: -1px;">
+                                Subscribe Our Newsletter
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <img src="./Images/facebook.png" class="img-fluid" style="height: 40px;width: 40px;" />
+            <img src="./Images/instagram.png" class="img-fluid" style="height: 40px;width: 40px;" />
+            <img src="./Images/linkedin.png" class="img-fluid" style="height: 40px;width: 40px;" />
+        </div>
+    </footer>
+
+
+    <!-- AOS For Animation -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Bootstrap Links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
