@@ -1,0 +1,48 @@
+﻿@model IEnumerable<first.Models.HouseKeeping_duties>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center">
+    <h2 class="mb-3">Housekeeping Duties</h2>
+
+    <p>
+        @Html.ActionLink("Add Duties", "Create", null, new { @class = "btn btnColor mb-3" })
+    </p>
+</div>
+
+<table class="table table-hover table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.status)</th>
+            <th>@Html.DisplayNameFor(model => model.issue_reported)</th>
+            <th>@Html.DisplayNameFor(model => model.date)</th>
+            <th>@Html.DisplayNameFor(model => model.user.name)</th>
+            <th>Room Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="@(item.status.ToLower() == "pending" ? "text-danger fw-bold" : item.status.ToLower() == "done" ? "text-success fw-semibold" : "")">
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.issue_reported)</td>
+                <td>@item.date.ToString("dd MMM yyyy, hh:mm tt")</td>
+                <td>@Html.DisplayFor(modelItem => item.user.name)</td>
+                <td>@Html.DisplayFor(modelItem => item.room.number)</td>
+                <td>
+                    <div class="d-flex gap-2">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-sm btn-primary" })
+                        @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-sm btn-primary" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-sm btn-danger" })
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

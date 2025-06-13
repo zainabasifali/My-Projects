@@ -1,0 +1,55 @@
+﻿@model IEnumerable<first.Models.inventory>
+@{
+    ViewBag.Title = "StaffIndex";
+    Layout = "~/Views/Shared/_StaffLayout.cshtml";
+}
+
+<style>
+    .btnColor {
+        background-color: #004d40 !important;
+        color: white;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+        .btnColor:hover {
+            color: white;
+            background-color: #00695c !important;
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+
+    .btn-sm {
+        font-size: 0.875rem;
+    }
+
+    .me-1 {
+        margin-right: 0.25rem;
+    }
+</style>
+
+<h2>Staff Index</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.name)</th>
+        <th>@Html.DisplayNameFor(model => model.category)</th>
+        <th>@Html.DisplayNameFor(model => model.quantity)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.name)</td>
+            <td>@Html.DisplayFor(modelItem => item.category)</td>
+            <td>@Html.DisplayFor(modelItem => item.quantity)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btnColor btn-sm me-1" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btnColor btn-sm" })
+            </td>
+        </tr>
+    }
+</table>

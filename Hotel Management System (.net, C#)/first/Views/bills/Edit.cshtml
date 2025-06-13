@@ -1,0 +1,70 @@
+﻿@model first.Models.bill
+
+@{
+    ViewBag.Title = "Edit Bill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Edit Bill</h2>
+        <div>
+            @Html.ActionLink("Back to List", "AdminIndex", null, new { @class = "btn btn-secondary rounded" })
+        </div>
+    </div>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.id)
+
+        <hr class="mb-4" />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.booking_id, "Booking", htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.DropDownList("booking_id", null, htmlAttributes: new { @class = "form-select rounded" })
+                @Html.ValidationMessageFor(model => model.booking_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.room_charges, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.room_charges, new { htmlAttributes = new { @class = "form-control rounded" } })
+                @Html.ValidationMessageFor(model => model.room_charges, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.other_charges, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.other_charges, new { htmlAttributes = new { @class = "form-control rounded" } })
+                @Html.ValidationMessageFor(model => model.other_charges, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.total_amount, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.total_amount, new { htmlAttributes = new { @class = "form-control rounded" } })
+                @Html.ValidationMessageFor(model => model.total_amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.generated_at, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.generated_at, new { htmlAttributes = new { @class = "form-control rounded", type = "datetime-local" } })
+                @Html.ValidationMessageFor(model => model.generated_at, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <div class="offset-md-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-primary rounded" />
+            </div>
+        </div>
+    }
+</div>

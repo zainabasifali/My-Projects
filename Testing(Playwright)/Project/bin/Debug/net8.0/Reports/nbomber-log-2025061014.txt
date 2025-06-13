@@ -1,0 +1,41 @@
+2025-06-10 14:19:08.540 +05:00 [INF] [ThreadId:18] NBomber 6.0.2 started a new session: 2025-06-10_09.19.43_session_58a91a35
+2025-06-10 14:19:08.616 +05:00 [INF] [ThreadId:18] NBomber started as single node
+2025-06-10 14:19:08.621 +05:00 [INF] [ThreadId:18] License validation....
+2025-06-10 14:19:08.624 +05:00 [WRN] [ThreadId:18] THIS VERSION IS FREE ONLY FOR PERSONAL USE. You can't use it for an organization.
+2025-06-10 14:19:08.656 +05:00 [INF] [ThreadId:18] Reports folder: C:\Users\zaina\Desktop\Project\Project\bin\Debug\net8.0\Reports
+2025-06-10 14:19:08.658 +05:00 [INF] [ThreadId:18] Plugin loaded: HttpMetricsPlugin
+2025-06-10 14:19:08.659 +05:00 [INF] [ThreadId:18] Reporting sinks: no reporting sinks were loaded
+2025-06-10 14:19:08.660 +05:00 [INF] [ThreadId:18] Starting init...
+2025-06-10 14:19:08.666 +05:00 [INF] [ThreadId:18] Start init plugin: HttpMetricsPlugin
+2025-06-10 14:19:08.680 +05:00 [INF] [ThreadId:18] Target scenarios: Load Test with Playwright in Demoblaze Application
+2025-06-10 14:19:08.684 +05:00 [INF] [ThreadId:18] Init finished
+2025-06-10 14:19:08.705 +05:00 [INF] [ThreadId:18] Starting warm up...
+2025-06-10 14:19:08.708 +05:00 [INF] [ThreadId:18] Warm up for scenarios: Load Test with Playwright in Demoblaze Application
+2025-06-10 14:19:08.714 +05:00 [INF] [ThreadId:18] Warm up duration: 00:00:30
+2025-06-10 14:19:39.789 +05:00 [INF] [ThreadId:17] Starting bombing...
+2025-06-10 14:19:44.815 +05:00 [ERR] [ThreadId:10] Unhandled exception for Scenario: 0
+System.TimeoutException: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.demoblaze.com/", waiting until "load"
+   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206
+   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 535
+   at Microsoft.Playwright.Core.Frame.GotoAsync(String url, FrameGotoOptions options) in /_/src/Playwright/Core/Frame.cs:line 796
+   at Project.LoadTesting.LoadPurchaseTest.<>c__DisplayClass0_0.<<Test01>b__0>d.MoveNext() in C:\Users\zaina\Desktop\Project\Project\LoadTesting\LoadPurchaseTest.cs:line 41
+--- End of stack trace from previous location ---
+   at NBomber.FSharp.Scenario.typedRun@70-1.MoveNext()
+   at NBomber.Domain.Scheduler.ScenarioActor.clo@67-5.MoveNext()
+2025-06-10 14:20:10.310 +05:00 [ERR] [ThreadId:19] Unhandled exception for Scenario: 0
+System.TimeoutException: Timeout 30000ms exceeded.
+Call log:
+  - waiting for Locator("#name") to be visible
+    63 × locator resolved to hidden <input id="name" type="text" class="form-control"/>
+   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206
+   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 535
+   at Project.LoadTesting.LoadPurchaseTest.<>c__DisplayClass0_0.<<Test01>b__0>d.MoveNext() in C:\Users\zaina\Desktop\Project\Project\LoadTesting\LoadPurchaseTest.cs:line 59
+--- End of stack trace from previous location ---
+   at NBomber.FSharp.Scenario.typedRun@70-1.MoveNext()
+   at NBomber.Domain.Scheduler.ScenarioActor.clo@67-5.MoveNext()
+2025-06-10 14:20:19.021 +05:00 [INF] [ThreadId:10] Stopping scenarios...
+2025-06-10 14:20:19.028 +05:00 [INF] [ThreadId:10] Calculating final statistics...
+2025-06-10 14:20:19.726 +05:00 [INF] [ThreadId:23] Reports saved in folder: C:\Users\zaina\Desktop\Project\Project\bin\Debug\net8.0\Reports
+2025-06-10 14:20:19.728 +05:00 [WRN] [ThreadId:23] THIS VERSION IS FREE ONLY FOR PERSONAL USE. You can't use it for an organization.

@@ -1,0 +1,106 @@
+{
+  "uuid": "ab54afe4-08cd-47d0-9c28-4b67e44b3740",
+  "historyId": "1f5d251371cd508d148b171e1caf202c",
+  "testCaseId": "801a59bd55b143a8498e1f6b569c080e",
+  "fullName": "Project/Features/Login 6/Login UnSuccessful",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Login 6"
+    },
+    {
+      "name": "feature",
+      "value": "Login 6"
+    },
+    {
+      "name": "tag",
+      "value": "mytag"
+    }
+  ],
+  "links": [],
+  "name": "Login UnSuccessful",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that you Go to Url www.demoblaze.com, navigate to the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546329743,
+      "stop": 1749546331499
+    },
+    {
+      "name": "Given keep username and password empty",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546331503,
+      "stop": 1749546331707
+    },
+    {
+      "name": "When User click the Login button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546331709,
+      "stop": 1749546331979
+    },
+    {
+      "name": "Then User should see a Alert box saying Please fill out Username and Password.",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546331981,
+      "stop": 1749546334995
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546329729,
+  "stop": 1749546335007
+}

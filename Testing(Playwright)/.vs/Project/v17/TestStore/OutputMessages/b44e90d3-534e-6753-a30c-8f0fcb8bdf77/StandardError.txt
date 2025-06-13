@@ -1,0 +1,63 @@
+2025-05-26T07:26:41.496Z pw:api navigating to "https://www.demoblaze.com/", waiting until "load"
+2025-05-26T07:26:42.212Z pw:api   "commit" event fired
+2025-05-26T07:26:42.212Z pw:api   navigated to "https://www.demoblaze.com/"
+2025-05-26T07:26:43.073Z pw:api   "domcontentloaded" event fired
+2025-05-26T07:26:43.133Z pw:api   "load" event fired
+2025-05-26T07:26:43.145Z pw:api waiting for Locator("#login2")
+2025-05-26T07:26:43.172Z pw:api   locator resolved to <a href="#" id="login2" class="nav-link" data-toggle="modal" data-target="#logInModal">Log in</a>
+2025-05-26T07:26:43.174Z pw:api attempting click action
+2025-05-26T07:26:43.175Z pw:api   waiting for element to be visible, enabled and stable
+2025-05-26T07:26:43.186Z pw:api   element is visible, enabled and stable
+2025-05-26T07:26:43.186Z pw:api   scrolling into view if needed
+2025-05-26T07:26:43.188Z pw:api   done scrolling
+2025-05-26T07:26:43.193Z pw:api   performing click action
+2025-05-26T07:26:43.207Z pw:api   click action done
+2025-05-26T07:26:43.207Z pw:api   waiting for scheduled navigations to finish
+2025-05-26T07:26:43.208Z pw:api   navigations have finished
+2025-05-26T07:26:43.220Z pw:api waiting for Locator("#loginusername")
+2025-05-26T07:26:43.225Z pw:api   locator resolved to <input type="text" id="loginusername" class="form-control"/>
+2025-05-26T07:26:43.227Z pw:api   fill("Hur")
+2025-05-26T07:26:43.227Z pw:api attempting fill action
+2025-05-26T07:26:43.227Z pw:api   waiting for element to be visible, enabled and editable
+2025-05-26T07:26:43.229Z pw:api   element is not visible
+2025-05-26T07:26:43.229Z pw:api retrying fill action
+2025-05-26T07:26:43.229Z pw:api   waiting for element to be visible, enabled and editable
+2025-05-26T07:26:43.230Z pw:api   element is not visible
+2025-05-26T07:26:43.230Z pw:api retrying fill action
+2025-05-26T07:26:43.230Z pw:api   waiting 20ms
+2025-05-26T07:26:43.253Z pw:api   waiting for element to be visible, enabled and editable
+2025-05-26T07:26:43.255Z pw:api   element is not visible
+2025-05-26T07:26:43.255Z pw:api retrying fill action
+2025-05-26T07:26:43.255Z pw:api   waiting 100ms
+2025-05-26T07:26:43.382Z pw:api   waiting for element to be visible, enabled and editable
+2025-05-26T07:26:43.397Z pw:api waiting for Locator("#loginpassword")
+2025-05-26T07:26:43.411Z pw:api   locator resolved to <input type="password" id="loginpassword" class="form-control"/>
+2025-05-26T07:26:43.413Z pw:api   fill("abc.123")
+2025-05-26T07:26:43.413Z pw:api attempting fill action
+2025-05-26T07:26:43.414Z pw:api   waiting for element to be visible, enabled and editable
+2025-05-26T07:26:43.432Z pw:api waiting for Locator("//button[text()='Log in']")
+2025-05-26T07:26:43.439Z pw:api   locator resolved to <button type="button" onclick="logIn()" class="btn btn-primary">Log in</button>
+2025-05-26T07:26:43.441Z pw:api attempting click action
+2025-05-26T07:26:43.441Z pw:api   waiting for element to be visible, enabled and stable
+2025-05-26T07:26:43.469Z pw:api   element is not stable
+2025-05-26T07:26:43.469Z pw:api retrying click action
+2025-05-26T07:26:43.469Z pw:api   waiting for element to be visible, enabled and stable
+2025-05-26T07:26:43.503Z pw:api   element is not stable
+2025-05-26T07:26:43.503Z pw:api retrying click action
+2025-05-26T07:26:43.503Z pw:api   waiting 20ms
+2025-05-26T07:26:43.528Z pw:api   waiting for element to be visible, enabled and stable
+2025-05-26T07:26:43.552Z pw:api   element is not stable
+2025-05-26T07:26:43.553Z pw:api retrying click action
+2025-05-26T07:26:43.553Z pw:api   waiting 100ms
+2025-05-26T07:26:43.656Z pw:api   waiting for element to be visible, enabled and stable
+2025-05-26T07:26:43.687Z pw:api   element is not stable
+2025-05-26T07:26:43.687Z pw:api retrying click action
+2025-05-26T07:26:43.687Z pw:api   waiting 100ms
+2025-05-26T07:26:43.796Z pw:api   waiting for element to be visible, enabled and stable
+2025-05-26T07:26:43.818Z pw:api   element is visible, enabled and stable
+2025-05-26T07:26:43.818Z pw:api   scrolling into view if needed
+2025-05-26T07:26:43.821Z pw:api   done scrolling
+2025-05-26T07:26:43.827Z pw:api   performing click action
+2025-05-26T07:26:43.834Z pw:api   click action done
+2025-05-26T07:26:43.834Z pw:api   waiting for scheduled navigations to finish
+2025-05-26T07:26:43.835Z pw:api   navigations have finished

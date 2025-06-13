@@ -1,0 +1,327 @@
+{
+  "uuid": "2763e12d-4f85-40a8-9122-ce2c0a4fde31",
+  "children": [
+    "a28d9146-a6fb-4747-a1be-afa1cdc8809c"
+  ],
+  "befores": [
+    {
+      "name": "AddToCartStepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546541338,
+      "stop": 1749546543359
+    },
+    {
+      "name": "CategoryNavigationStepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543361,
+      "stop": 1749546543365
+    },
+    {
+      "name": "ContactStepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543365,
+      "stop": 1749546543385
+    },
+    {
+      "name": "DeleteProductFromCart.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543385,
+      "stop": 1749546543387
+    },
+    {
+      "name": "Login1StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543387,
+      "stop": 1749546543390
+    },
+    {
+      "name": "Login2StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543390,
+      "stop": 1749546543392
+    },
+    {
+      "name": "Login3StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543392,
+      "stop": 1749546543394
+    },
+    {
+      "name": "Login4StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543394,
+      "stop": 1749546543396
+    },
+    {
+      "name": "Login5StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543396,
+      "stop": 1749546543398
+    },
+    {
+      "name": "Login6StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543398,
+      "stop": 1749546543401
+    },
+    {
+      "name": "Purchase1StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543401,
+      "stop": 1749546543404
+    },
+    {
+      "name": "Product2StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543404,
+      "stop": 1749546543407
+    },
+    {
+      "name": "Purchase3StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543407,
+      "stop": 1749546543409
+    },
+    {
+      "name": "Purchase4StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543409,
+      "stop": 1749546543412
+    },
+    {
+      "name": "Purchase5StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543412,
+      "stop": 1749546543414
+    },
+    {
+      "name": "SignUp1StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543414,
+      "stop": 1749546543416
+    },
+    {
+      "name": "SignUp2StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543416,
+      "stop": 1749546543419
+    },
+    {
+      "name": "SignUp3StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543420,
+      "stop": 1749546543422
+    },
+    {
+      "name": "SignUp4StepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543422,
+      "stop": 1749546543425
+    },
+    {
+      "name": "TotalAmountCalculationStepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543425,
+      "stop": 1749546543427
+    },
+    {
+      "name": "UserLogoutStepDefinitions.Setup()",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543427,
+      "stop": 1749546543430
+    }
+  ],
+  "afters": [],
+  "links": [],
+  "start": 1749546541331,
+  "stop": 1749546561395
+}

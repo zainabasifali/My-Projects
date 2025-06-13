@@ -1,0 +1,38 @@
+﻿@model IEnumerable<first.Models.booking>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+<h2>Bookings Pending Feedback</h2>
+
+@if (!Model.Any())
+{
+    <p>You have no bookings pending feedback.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>Check-in Date</th>
+                <th>Check-out Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model)
+            {
+                <tr>
+                    <td>@booking.id</td>
+                    <td>@booking.check_in.ToString("yyyy-MM-dd")</td>
+                    <td>@booking.check_out.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        @Html.ActionLink("Give Feedback", "Create", new { bookingId = booking.id }, new { @class = "btn btn-primary btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

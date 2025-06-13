@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "Guest Dashboard";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+    .text-theme-primary {
+        color: #004d40 !important;
+    }
+
+    .btn-outline-theme {
+        color: #004d40;
+        border-color: #004d40;
+    }
+
+        .btn-outline-theme:hover {
+            background-color: #004d40;
+            color: white;
+        }
+
+    .border-theme-primary {
+        border-color: #004d40 !important;
+    }
+
+    .border-theme-info {
+        border-color: #00695c !important;
+    }
+
+    .text-theme-info {
+        color: #00695c !important;
+    }
+
+    .btn-outline-theme-info {
+        color: #00695c;
+        border-color: #00695c;
+    }
+
+        .btn-outline-theme-info:hover {
+            background-color: #00695c;
+            color: white;
+        }
+
+    .border-theme-success {
+        border-color: #003d33 !important;
+    }
+
+    .text-theme-success {
+        color: #003d33 !important;
+    }
+
+    .btn-outline-theme-success {
+        color: #003d33;
+        border-color: #003d33;
+    }
+
+        .btn-outline-theme-success:hover {
+            background-color: #003d33;
+            color: white;
+        }
+
+    .card-profile {
+        border-left: 5px solid #004d40;
+        background-color: #f1f8f7;
+    }
+
+    .badge {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    #bookingChart {
+        max-height: 160px !important;
+    }
+</style>
+
+<!-- Welcome -->
+<div class="jumbotron bg-light rounded shadow-sm p-4 mb-4">
+    <h2 class="display-5 text-theme-primary">Welcome, Guests</h2>
+    <p class="lead text-theme-primary">Your personalized dashboard for managing your hotel stay.</p>
+</div>
+
+<!-- Profile Card -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card shadow-sm rounded card-profile p-3">
+            <div class="card-body">
+                <h4 class="card-title text-theme-primary"><i class="fas fa-user-circle me-2" style="margin-left:-15px"></i>Your Profile</h4>
+                <div class="row">
+                    <div class="col-md-4"><strong>Name:</strong> @ViewBag.guest.name</div>
+                    <div class="col-md-4"><strong>Email:</strong> @ViewBag.guest.email</div>
+                    <div class="col-md-4"><strong>First Logged In:</strong> @ViewBag.guest.created_at</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dashboard Cards -->
+<div class="row mb-4">
+    <div class="col-md-8">
+        <div class="card shadow-sm rounded border-theme-primary">
+            <div class="card-body">
+                <h5 class="card-title text-theme-primary"><i class="fas fa-chart-pie me-2"></i>Booking Summary Chart</h5>
+                <canvas id="bookingChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm rounded border-theme-success">
+            <div class="card-body">
+                <h5 class="card-title text-theme-success"><i class="fas fa-file-invoice-dollar me-2"></i>Your Bills</h5>
+                <p class="card-text text-theme-success">Review your charges and unpaid invoices.</p>
+                <div class="mt-2 text-center">
+                    <strong>Total Bills:</strong> <span class="badge bg-secondary mb-3">@ViewBag.TotalBills</span><br />
+                    <strong>Unpaid:</strong> <span class="badge bg-danger">@ViewBag.UnpaidBills</span>
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <a href="@Url.Action("GuestIndex", "bills")" class="btn btn-outline-theme-success btn-sm">View Bills</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const pending = @(ViewBag.PendingBookings ?? 0);
+    const confirmed = @(ViewBag.ConfirmedBookings ?? 0);
+    const cancelled = @(ViewBag.CancelledBookings ?? 0);
+
+    const totalBookings = pending + confirmed + cancelled;
+
+    const data = totalBookings === 0
+        ? [1]  
+        : [pending, confirmed, cancelled];
+
+    const backgroundColors = totalBookings === 0
+        ? ['#e0e0e0']  
+        : ['#fbc02d', '#004d40', '#d32f2f'];
+
+    const labels = totalBookings === 0
+        ? ['No Bookings']
+        : ['Pending', 'Confirmed', 'Cancelled'];
+
+    const ctx = document.getElementById('bookingChart').getContext('2d');
+    const bookingChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Bookings',
+                data: data,
+                backgroundColor: backgroundColors,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+</script>

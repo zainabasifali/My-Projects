@@ -1,0 +1,147 @@
+{
+  "uuid": "513348b1-923b-4908-93f7-aa5f28d42091",
+  "historyId": "bc011cc8fde493d1b3d0ee743994d97b",
+  "testCaseId": "c73118bb277771591c84a6249c53c805",
+  "fullName": "Project/Features/DeleteProductFromCart/Add a product to the cart and remove it",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.DeleteProductFromCart"
+    },
+    {
+      "name": "feature",
+      "value": "DeleteProductFromCart"
+    }
+  ],
+  "links": [],
+  "name": "Add a product to the cart and remove it",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given the User is on the homepage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546773451,
+      "stop": 1749546775368
+    },
+    {
+      "name": "When the user clicks on the product",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546775372,
+      "stop": 1749546778925
+    },
+    {
+      "name": "When the user clicks the Add to cart button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546778928,
+      "stop": 1749546780356
+    },
+    {
+      "name": "When accepts the alert popup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546780358,
+      "stop": 1749546782376
+    },
+    {
+      "name": "When the user navigates to the cart page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546782376,
+      "stop": 1749546782739
+    },
+    {
+      "name": "When the user deletes the added product from the cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546782739,
+      "stop": 1749546786677
+    },
+    {
+      "name": "Then the product with same name no longer visible in the cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546786680,
+      "stop": 1749546786711
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546773436,
+  "stop": 1749546786719
+}

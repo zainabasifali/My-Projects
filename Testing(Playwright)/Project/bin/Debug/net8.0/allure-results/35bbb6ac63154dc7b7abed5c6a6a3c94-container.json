@@ -1,0 +1,12 @@
+{
+  "uuid": "d5610596-b984-44b4-ab55-3782170ed501",
+  "name": "Project.ApiTesting.ProductGet.ProductGetResponse",
+  "children": [
+    "4692e139-0351-4228-b9d2-276d2331aea4"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1749646220601,
+  "stop": 1749646224133
+}

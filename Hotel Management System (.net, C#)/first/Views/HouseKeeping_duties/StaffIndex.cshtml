@@ -1,0 +1,78 @@
+﻿@model IEnumerable<first.Models.HouseKeeping_duties>
+@{
+    ViewBag.Title = "StaffIndex";
+    Layout = "~/Views/Shared/_StaffLayout.cshtml";
+}
+
+<h2>StaffIndex</h2>
+
+
+@*<p>
+        @Html.ActionLink("Add Duties", "Create")
+    </p>*@
+@if (Model != null && Model.Any())
+{
+   
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.status)</th>
+                    <th>@Html.DisplayNameFor(model => model.issue_reported)</th>
+                    <th>@Html.DisplayNameFor(model => model.date)</th>
+                    <th>@Html.DisplayNameFor(model => model.user.name)</th>
+                    <th>@Html.DisplayNameFor(model => model.room.number)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="@(item.status.ToLower() == "pending" ? "text-danger" : "") text-capitalize">
+                            @Html.DisplayFor(modelItem => item.status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.issue_reported)
+                        </td>
+                        <td>
+                            @item.date.ToString("yyyy-MM-dd")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.user.name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.room.number)
+                        </td>
+                        <td>
+                            @if (item.status.ToLower() != "done")
+                            {
+                                var timeSincePosted = DateTime.Now - item.date;
+
+                                <div class="d-flex gap-2">
+                                    @if (timeSincePosted.TotalDays < 1)
+                                    {
+                                        using (Html.BeginForm("MarkAsDoneConfirmed", "HouseKeeping_duties", new { id = item.id }, FormMethod.Post))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-success btn-sm">Mark as Done</button>
+                                        }
+                                        @Html.ActionLink("Report Issue", "ReportIssue", new { id = item.id }, new { @class = "btn btn-warning btn-sm" })
+                                    }
+                                </div>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+}
+else
+{
+    <p class="alert alert-info">No duty records found.</p>
+}
+
+

@@ -1,0 +1,2 @@
+API is now responding
+Body Text is validated

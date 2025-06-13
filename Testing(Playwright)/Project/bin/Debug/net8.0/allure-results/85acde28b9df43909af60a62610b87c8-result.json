@@ -1,0 +1,147 @@
+{
+  "uuid": "fd5d67b7-e5f1-413e-bc8c-6b287348cb1e",
+  "historyId": "f677be3f2af960c1564aecaf497fc1de",
+  "testCaseId": "0cfa76d6be224b93c79807ca23b391d8",
+  "fullName": "Project/Features/Purchase5/User completes a purchase without add to cart",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Purchase5"
+    },
+    {
+      "name": "feature",
+      "value": "Purchase5"
+    }
+  ],
+  "links": [],
+  "name": "User completes a purchase without add to cart",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given the user is on the Demoblaze homepage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546481036,
+      "stop": 1749546485546
+    },
+    {
+      "name": "When the user clicks on the \"Cart\" link in the navbar",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546485549,
+      "stop": 1749546487999
+    },
+    {
+      "name": "When the user click the \"Place Order\" button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546488003,
+      "stop": 1749546488347
+    },
+    {
+      "name": "Then a modal form should appear for entering purchase details",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546488350,
+      "stop": 1749546488366
+    },
+    {
+      "name": "When the user fills in the form with data from \"data.json\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546488367,
+      "stop": 1749546488521
+    },
+    {
+      "name": "When the user clicks the  button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546488521,
+      "stop": 1749546491633
+    },
+    {
+      "name": "Then a confirmation modal should appear with the message",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546491633,
+      "stop": 1749546491655
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546481023,
+  "stop": 1749546491663
+}

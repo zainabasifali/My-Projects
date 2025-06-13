@@ -1,0 +1,93 @@
+﻿@model first.Models.expens
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Create Expense</h2>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.category, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.category,
+                    new List<SelectListItem>
+                    {
+                        new SelectListItem { Text = "Inventory", Value = "inventory" },
+                        new SelectListItem { Text = "UtilityWater", Value = "utility_water" },
+                        new SelectListItem { Text = "UtilityElectricity", Value = "utility_electricity" },
+                        new SelectListItem { Text = "UtilityGas", Value = "utility_gas" },
+                        new SelectListItem { Text = "Maintainance", Value = "maintenance" },
+                        new SelectListItem { Text = "Salary", Value = "salary" }
+
+                    },
+                    "Select Category",
+                    new { @class = "form-select rounded" })
+                @Html.ValidationMessageFor(model => model.category, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.inventory_id, "Inventory", htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.DropDownList("inventory_id", null, htmlAttributes: new { @class = "form-select rounded" })
+                @Html.ValidationMessageFor(model => model.inventory_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.item_name, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.item_name, new { htmlAttributes = new { @class = "form-control rounded" } })
+                @Html.ValidationMessageFor(model => model.item_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control rounded" } })
+                @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.amount, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.amount, new { htmlAttributes = new { @class = "form-control rounded", type = "number", step = "0.01" } })
+                @Html.ValidationMessageFor(model => model.amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.expense_date, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.expense_date, new { htmlAttributes = new { @class = "form-control rounded", type = "datetime-local" } })
+                @Html.ValidationMessageFor(model => model.expense_date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.recorded_by, "Recorded By", htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.DropDownList("recorded_by", null, htmlAttributes: new { @class = "form-select rounded" })
+                @Html.ValidationMessageFor(model => model.recorded_by, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary rounded" />
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary rounded ms-2" })
+            </div>
+        </div>
+    }
+</div>

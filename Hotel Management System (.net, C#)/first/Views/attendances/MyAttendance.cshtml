@@ -1,0 +1,54 @@
+﻿@model IEnumerable<first.Models.attendance>
+
+@{
+    ViewBag.Title = "My Attendance";
+    Layout = "~/Views/Shared/_StaffLayout.cshtml"; // or your layout
+}
+
+<h2>My Attendance</h2>
+
+@if (Model != null && Model.Any())
+{
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Marked By</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.date.ToShortDateString()</td>
+                        <td>
+                            @if (item.status.ToLower() == "present")
+                            {
+                                <span class="text-success text-capitalize">@item.status</span>
+                            }
+                            else if (item.status.ToLower() == "absent")
+                            {
+                                <span class="text-danger text-capitalize">@item.status</span>
+                            }
+                            else
+                            {
+                                <span class="text-warning text-capitalize">@item.status</span>
+                            }
+                        </td>
+                        <td>@(item.user != null ? item.user.name : "Not Marked")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+}
+else
+{
+    <p class="alert alert-info">No attendance records found.</p>
+}
+

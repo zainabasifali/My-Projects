@@ -1,0 +1,106 @@
+{
+  "uuid": "5960f7ec-0a12-4078-8465-d4f979678295",
+  "historyId": "723c68aafaa5d72328b5a985865e09ad",
+  "testCaseId": "a1cf41afb4063b8927cfd7af9974ae4d",
+  "fullName": "Project/Features/Login 1/Login successful",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Login 1"
+    },
+    {
+      "name": "feature",
+      "value": "Login 1"
+    },
+    {
+      "name": "tag",
+      "value": "mytag"
+    }
+  ],
+  "links": [],
+  "name": "Login successful",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that go to url abc.com, navigate to the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749648815296,
+      "stop": 1749648817543
+    },
+    {
+      "name": "Given enter username and password",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749648817548,
+      "stop": 1749648817749
+    },
+    {
+      "name": "When user clicks the login button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749648817751,
+      "stop": 1749648818196
+    },
+    {
+      "name": "Then user should see a message \"Welcome Hur\"",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749648818199,
+      "stop": 1749648818218
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749648815284,
+  "stop": 1749648818225
+}

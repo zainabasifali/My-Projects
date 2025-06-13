@@ -1,0 +1,6 @@
+Update Successful
+Response Body: {
+  "id": "3",
+  "name": "Laptops Hp",
+  "prize": 100
+}

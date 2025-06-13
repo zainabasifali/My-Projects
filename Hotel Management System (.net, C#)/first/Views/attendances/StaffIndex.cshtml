@@ -1,0 +1,58 @@
+﻿@model IEnumerable<first.Models.AttendanceViewModel>
+
+
+@{
+    ViewBag.Title = "StaffIndex";
+    Layout = "~/Views/Shared/_StaffLayout.cshtml";
+}
+
+<h2>My Attendance</h2>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    @if ((bool)ViewBag.CanMarkAttendance)
+    {
+        using (Html.BeginForm("MarkPresent", "attendances", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btnColor">Mark Attendance</button>
+        }
+    }
+    else
+    {
+        <span class="text-muted">You cannot mark attendance after 10:00 AM or you have already marked it today.</span>
+    }
+
+    <a href="@Url.Action("MyAttendance", "attendances")" class="btn btn-primary">View All Attendance</a>
+</div>
+
+
+@if (Model != null && Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>User Name</th>
+                    <th>Marked By</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.date.ToShortDateString()</td>
+                        <td>@item.status</td>
+                        <td>@item.userName</td>
+                        <td>@item.markedByName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p class="alert alert-info">No attendance records found.</p>
+}

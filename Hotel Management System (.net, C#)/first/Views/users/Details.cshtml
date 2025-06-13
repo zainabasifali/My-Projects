@@ -1,0 +1,59 @@
+﻿@model first.Models.user
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>User Details</h2>
+        <div>
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary rounded" })
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">User Information</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.name)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.name)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.email)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.password)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.password)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.role)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.role)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.created_at)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.created_at)
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

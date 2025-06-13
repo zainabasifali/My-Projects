@@ -1,0 +1,106 @@
+{
+  "uuid": "1da6cdab-7303-44dc-8f08-c3f997519dd3",
+  "historyId": "86dc75301d7cdbbdd1821bcd489aa27d",
+  "testCaseId": "81e6f156ad804bdaa564d8a93bbcace4",
+  "fullName": "Project/Features/Login 5/Login UnSuccessful",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Login 5"
+    },
+    {
+      "name": "feature",
+      "value": "Login 5"
+    },
+    {
+      "name": "tag",
+      "value": "mytag"
+    }
+  ],
+  "links": [],
+  "name": "Login UnSuccessful",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that you go to Url www.demoblaze.com, navigate to the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546308101,
+      "stop": 1749546310208
+    },
+    {
+      "name": "Given fill correct username and keep password empty",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546310215,
+      "stop": 1749546310397
+    },
+    {
+      "name": "When User clicks the Login button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546310402,
+      "stop": 1749546310459
+    },
+    {
+      "name": "Then User should see a alert box saying Please fill out Username and Password.",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546310464,
+      "stop": 1749546313493
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546308088,
+  "stop": 1749546313501
+}

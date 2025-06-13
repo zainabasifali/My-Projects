@@ -1,0 +1,102 @@
+{
+  "uuid": "8d92fefe-0583-47ef-a435-ae7d4e78d8ca",
+  "historyId": "0f6763b6dbdba9d36cefe77b353c35c3",
+  "testCaseId": "e1a92aa12e34c5cae96edd6eff150b48",
+  "fullName": "Project/Features/AddToCart/Add first product to cart and confirm popup",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.AddToCart"
+    },
+    {
+      "name": "feature",
+      "value": "AddToCart"
+    }
+  ],
+  "links": [],
+  "name": "Add first product to cart and confirm popup",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given the user is on the homepage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546582605,
+      "stop": 1749546595005
+    },
+    {
+      "name": "When the user clicks on the first product",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546595010,
+      "stop": 1749546611544
+    },
+    {
+      "name": "When the user clicks the \"Add to cart\" button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546611549,
+      "stop": 1749546614518
+    },
+    {
+      "name": "Then the alert message should match the one in data file",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546614520,
+      "stop": 1749546620268
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546582593,
+  "stop": 1749546620283
+}

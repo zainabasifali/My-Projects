@@ -1,0 +1,90 @@
+﻿@model first.Models.booking
+
+@{
+    string userRole = null;
+    string guestName = null;
+
+    if (Session["UserRole"] != null && Session["username"] != null)
+    {
+        userRole = Session["UserRole"].ToString();
+        guestName = Session["Username"].ToString();
+    }
+
+    ViewBag.Title = "Edit";
+    Layout = userRole != null && userRole == "Admin"
+        ? "~/Views/Shared/_AdminLayout.cshtml"
+        : "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Edit Booking</h2>
+        <div>
+            @if (userRole == "Admin")
+            {
+                @Html.ActionLink("Back to List", "AdminIndex", null, new { @class = "btn btn-secondary rounded" })
+            }
+            else
+            {
+                @Html.ActionLink("Back to List", "GuestIndex", null, new { @class = "btn btn-secondary rounded" })
+            }
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.id)
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.guest_id, "Guest", htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @if (@userRole == "Admin")
+                {
+                    @Html.DropDownList("guest_id", null, "Select Guest", htmlAttributes: new { @class = "form-select rounded" })
+                }
+                else
+                {
+                    @Html.TextBox("GuestNameReadOnly", guestName, new { @class = "form-control rounded", @readonly = "readonly" })
+                    @Html.HiddenFor(model => model.guest_id, new { Value = Session["UserId"] })
+                }
+                @Html.ValidationMessageFor(model => model.guest_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.room_id, "Room", htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.DropDownList("room_id", null, htmlAttributes: new { @class = "form-select rounded" })
+                @Html.ValidationMessageFor(model => model.room_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+
+            @Html.LabelFor(model => model.check_in, new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.check_in, "{0:yyyy-MM-ddTHH:mm}", new { @class = "form-control rounded", type = "datetime-local" })
+                @Html.ValidationMessageFor(model => model.check_in, "", new { @class = "text-danger" })
+            </div>
+            </div>
+
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.check_out, new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.check_out, "{0:yyyy-MM-ddTHH:mm}", new { @class = "form-control rounded", type = "datetime-local" })
+                @Html.ValidationMessageFor(model => model.check_out, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+
+            <div class="mb-3 row">
+                <div class="offset-md-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-primary rounded" />
+                </div>
+            </div>
+            }
+        </div>

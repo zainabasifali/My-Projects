@@ -1,0 +1,36 @@
+{
+  "url": "https://www.demoblaze.com/",
+  //login
+  "username": "Hur",
+  "password": "abc.1234",
+  "expectedLogin1Text": "Welcome Hur",
+  "Wrongusername": "Aina",
+  "Wrongpassword": "abc.123",
+  "expectedLogin2Text": "User does not exist.",
+  "expectedLogin3Text": "Wrong password.",
+  "expectedLogin4Text": "Please fill out Username and Password.",
+  //signup
+  "signupUsername": "bella",
+  "expectedSignUp1Text": "Sign up successful.",
+  "expectedSignUp2Text": "This user already exist.",
+  //contact
+  "email": "zainabasif@gmail.com",
+  "message": "I want to know about your company",
+  "expectedContactText": "Thanks for the message!!",
+  //cart
+  "productName1": "Samsung galaxy s6",
+  "productName2": "Nokia lumia 1520",
+  "expectedCartText": "Product added",
+  //Purchase
+  "name": "John Doe",
+  "country": "USA",
+  "city": "New York",
+  "card": "1234567812345678",
+  "month": "12",
+  "year": "2025",
+  "successMessage": "Thank you for your purchase!",
+  "expectedPurchaseErrorText": "Please fill out Name and Creditcard."
+
+
+
+}

@@ -1,0 +1,67 @@
+{
+  "uuid": "8836d48c-ad13-4561-a869-ce771ad8d047",
+  "historyId": "bf6824c59015aa3e450458645e44e409",
+  "testCaseId": "749d6670141517719998709a07ce2df7",
+  "fullName": "Project:Project.ApiTesting.ProductDelete.ProductDeleteResponse()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Project.ApiTesting"
+    },
+    {
+      "name": "testMethod",
+      "value": "ProductDeleteResponse"
+    },
+    {
+      "name": "testClass",
+      "value": "ProductDelete"
+    }
+  ],
+  "links": [],
+  "name": "ProductDeleteResponse",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "ProductDeleteResponse",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749640640282,
+      "stop": 1749640642952
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "6c0812c6-6bce-4715-8696-24838c241ec6-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1749640640268,
+  "stop": 1749640642965
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="908329ecaaed4b09838d2104eebd6ac8" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="HotelModel.attendance" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.bill" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.booking" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.expens" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.feedback" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.HouseKeeping_duties" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.inventory" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.room" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.user" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="HotelModel.FK__attendanc__marke__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__attendanc__user___534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__bills__booking_i__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__bookings__guest___2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__bookings__room_i__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK_feedback_booking_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__expenses__invent__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__expenses__record__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__HouseKeep__assig__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK__HouseKeep__room___1FCDBCEB" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

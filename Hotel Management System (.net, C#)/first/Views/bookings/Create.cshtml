@@ -1,0 +1,89 @@
+﻿@model first.Models.booking
+
+@{
+    string userRole = null; 
+    string guestName = null;
+
+    if (Session["UserRole"] != null && Session["username"] != null) {
+         userRole = Session["UserRole"].ToString();
+         guestName = Session["Username"].ToString();
+    }
+
+    ViewBag.Title = "Create";
+    if (userRole != null && userRole == "Admin")
+    {
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_GuestLayout.cshtml";
+    }
+}
+
+<div class="container">
+    <h2>Create Booking</h2>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.guest_id, "Guest", htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @if (@userRole == "Admin")
+                {
+                    @Html.DropDownList("guest_id", null, "Select Guest", htmlAttributes: new { @class = "form-select rounded" })
+                }
+                else
+                {
+                    @Html.TextBox("GuestNameReadOnly", guestName, new { @class = "form-control rounded", @readonly = "readonly" })
+                    @Html.HiddenFor(model => model.guest_id, new { Value = Session["UserId"] })
+                }
+                @Html.ValidationMessageFor(model => model.guest_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.room_id, "Room", htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.DropDownList("room_id", null, "Select Room", htmlAttributes: new { @class = "form-select rounded" })
+                @Html.ValidationMessageFor(model => model.room_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.check_in, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.check_in, new { htmlAttributes = new { @class = "form-control rounded", type = "datetime-local" } })
+                @Html.ValidationMessageFor(model => model.check_in, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.check_out, htmlAttributes: new { @class = "col-md-2 col-form-label fw-semibold" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.check_out, new { htmlAttributes = new { @class = "form-control rounded", type = "datetime-local" } })
+                @Html.ValidationMessageFor(model => model.check_out, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="mb-3 row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary rounded" />
+                @if (userRole == "Admin")
+                {
+                    @Html.ActionLink("Back to List", "AdminIndex", null, new { @class = "btn btn-secondary rounded ms-2" })
+                }
+                else
+                {
+                    @Html.ActionLink("Back to List", "GuestIndex", null, new { @class = "btn btn-secondary rounded ms-2" })
+
+                }
+            </div>
+        </div>
+    }
+</div>

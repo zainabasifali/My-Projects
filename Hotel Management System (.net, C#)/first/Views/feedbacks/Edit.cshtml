@@ -1,0 +1,121 @@
+﻿@model first.Models.feedback
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+
+<div class="form-group d-flex align-items-center justify-content-between">
+    <h2 class="mb-0">Edit Feedback</h2>
+    <div>
+        <button id="externalSubmit" class="btn btnColor" type="button">Save</button>
+        <a href="@Url.Action("GuestIndex", "feedbacks")" class="btn btn-secondary">Cancel</a>
+    </div>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Feedback</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.message, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.message, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.message, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.created_at, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.created_at, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.created_at, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.booking_id, "Booking", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("booking_id", null, htmlAttributes: new { @class = "form-control", disabled = "disabled" })
+            @Html.HiddenFor(model => model.booking_id)
+            @Html.ValidationMessageFor(model => model.booking_id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <!-- Star Rating -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.rating, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" @(Model.rating == 5 ? "checked" : "") />
+                <label for="star5">&#9733;</label>
+
+                <input type="radio" id="star4" name="rating" value="4" @(Model.rating == 4 ? "checked" : "") />
+                <label for="star4">&#9733;</label>
+
+                <input type="radio" id="star3" name="rating" value="3" @(Model.rating == 3 ? "checked" : "") />
+                <label for="star3">&#9733;</label>
+
+                <input type="radio" id="star2" name="rating" value="2" @(Model.rating == 2 ? "checked" : "") />
+                <label for="star2">&#9733;</label>
+
+                <input type="radio" id="star1" name="rating" value="1" @(Model.rating == 1 ? "checked" : "") />
+                <label for="star1">&#9733;</label>
+            </div>
+            @Html.ValidationMessageFor(model => model.rating, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+</div>
+}
+
+<script>
+    document.getElementById('externalSubmit').addEventListener('click', function () {
+        document.querySelector('form').submit();
+    });
+</script>
+
+
+<style>
+    .star-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2.5rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+            .star-rating label:hover,
+            .star-rating label:hover ~ label {
+                color: #deb217;
+            }
+
+        .star-rating input[type="radio"]:checked ~ label {
+            color: #ccc; /* Reset in case it applies wrongly */
+        }
+
+        .star-rating input[type="radio"]:checked + label,
+        .star-rating input[type="radio"]:checked + label ~ label {
+            color: #ffc700;
+        }
+</style>

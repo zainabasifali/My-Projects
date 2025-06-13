@@ -1,0 +1,61 @@
+{
+  "uuid": "b2cbdf8b-aaa2-47b5-ba9d-58cde5ceea84",
+  "historyId": "b1f2ac70cffed3f4c0d34cff2a8aba3d",
+  "testCaseId": "5250eb33f644e5953550f82337895402",
+  "fullName": "Project:Project.ApiTesting.ProductPost.ProductPostResponse()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Project.ApiTesting"
+    },
+    {
+      "name": "testMethod",
+      "value": "ProductPostResponse"
+    },
+    {
+      "name": "testClass",
+      "value": "ProductPost"
+    }
+  ],
+  "links": [],
+  "name": "ProductPostResponse",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "ProductPostResponse",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749646460662,
+      "stop": 1749646462817
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749646460648,
+  "stop": 1749646462825
+}

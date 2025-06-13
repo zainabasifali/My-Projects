@@ -1,0 +1,59 @@
+﻿@model IEnumerable<first.Models.room>
+
+@{
+    ViewBag.Title = "StaffIndex";
+    Layout = "~/Views/Shared/_StaffLayout.cshtml";
+}
+
+<style>
+    .btnColor {
+        background-color: #004d40 !important;
+        color: white;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+        .btnColor:hover {
+            color: white;
+            background-color: #00695c !important;
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+
+    .btn-sm {
+        font-size: 0.875rem;
+    }
+
+    .me-1 {
+        margin-right: 0.25rem;
+    }
+</style>
+
+<h2>Staff Index</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.number)</th>
+        <th>@Html.DisplayNameFor(model => model.type)</th>
+        <th>@Html.DisplayNameFor(model => model.status)</th>
+        <th>@Html.DisplayNameFor(model => model.price)</th>
+        <th>@Html.DisplayNameFor(model => model.description)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.number)</td>
+            <td>@Html.DisplayFor(modelItem => item.type)</td>
+            <td>@Html.DisplayFor(modelItem => item.status)</td>
+            <td>@Html.DisplayFor(modelItem => item.price)</td>
+            <td>@Html.DisplayFor(modelItem => item.description)</td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btnColor btn-sm me-1" })
+            </td>
+        </tr>
+    }
+</table>

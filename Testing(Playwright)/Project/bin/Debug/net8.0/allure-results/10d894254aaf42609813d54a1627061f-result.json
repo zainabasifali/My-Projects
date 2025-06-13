@@ -1,0 +1,136 @@
+{
+  "uuid": "b47644b4-c920-487d-adbc-635d329c851f",
+  "historyId": "5f8c4b7bc0cb08afa4faec25f17bda71",
+  "testCaseId": "7add21c11ee51cbc04411b10374fae1c",
+  "fullName": "Project/Features/Purchase2/Purchase Failed",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Purchase2"
+    },
+    {
+      "name": "feature",
+      "value": "Purchase2"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "Purchase Failed",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given User will go to demoblaze website",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546379071,
+      "stop": 1749546381744
+    },
+    {
+      "name": "When Add product to cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546381746,
+      "stop": 1749546385478
+    },
+    {
+      "name": "When Navigate to cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546385493,
+      "stop": 1749546388861
+    },
+    {
+      "name": "When Click place order",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546388862,
+      "stop": 1749546388914
+    },
+    {
+      "name": "When User will fill only name field of the purchase form",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546388914,
+      "stop": 1749546392533
+    },
+    {
+      "name": "Then User will see an error message to fill all fields",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546392535,
+      "stop": 1749546395566
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546379059,
+  "stop": 1749546395576
+}

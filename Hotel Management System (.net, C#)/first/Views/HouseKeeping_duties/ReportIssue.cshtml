@@ -1,0 +1,24 @@
+﻿@model first.Models.HouseKeeping_duties
+
+@{
+    ViewBag.Title = "Report Issue";
+    Layout = "~/Views/Shared/_StaffLayout.cshtml";
+}
+
+<h2>Report Issue for Room: @Model.room.number</h2>
+
+@using (Html.BeginForm("ReportIssue", "HouseKeeping_duties", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.Hidden("id", Model.id)
+
+    <div class="form-group">
+        <label for="issueText">Describe the issue:</label>
+        <textarea name="issueText" class="form-control" rows="4">@Model.issue_reported</textarea>
+    </div>
+
+    <div class="mt-2">
+        <button type="submit" class="btn btn-warning">Submit Issue</button>
+        @Html.ActionLink("Cancel", "StaffIndex", null, new { @class = "btn btn-secondary" })
+    </div>
+}

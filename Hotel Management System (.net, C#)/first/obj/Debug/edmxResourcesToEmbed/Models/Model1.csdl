@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="attendance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="marked_by" Type="Int32" />
+    <NavigationProperty Name="user" Relationship="Self.FK__attendanc__marke__5441852A" FromRole="attendance" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__attendanc__user___534D60F1" FromRole="attendance" ToRole="users" />
+  </EntityType>
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="booking_id" Type="Int32" Nullable="false" />
+    <Property Name="room_charges" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="other_charges" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="generated_at" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="booking" Relationship="Self.FK__bills__booking_i__3A81B327" FromRole="bills" ToRole="bookings" />
+  </EntityType>
+  <EntityType Name="booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guest_id" Type="Int32" Nullable="false" />
+    <Property Name="room_id" Type="Int32" Nullable="false" />
+    <Property Name="check_in" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="check_out" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="bills" Relationship="Self.FK__bills__booking_i__3A81B327" FromRole="bookings" ToRole="bills" />
+    <NavigationProperty Name="user" Relationship="Self.FK__bookings__guest___2B3F6F97" FromRole="bookings" ToRole="users" />
+    <NavigationProperty Name="room" Relationship="Self.FK__bookings__room_i__2C3393D0" FromRole="bookings" ToRole="rooms" />
+    <NavigationProperty Name="feedbacks" Relationship="Self.FK_feedback_booking_id" FromRole="bookings" ToRole="feedback" />
+  </EntityType>
+  <EntityType Name="expens">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="inventory_id" Type="Int32" />
+    <Property Name="item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="expense_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="recorded_by" Type="Int32" />
+    <NavigationProperty Name="inventory" Relationship="Self.FK__expenses__invent__33D4B598" FromRole="expenses" ToRole="inventory" />
+    <NavigationProperty Name="user" Relationship="Self.FK__expenses__record__34C8D9D1" FromRole="expenses" ToRole="users" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="booking_id" Type="Int32" Nullable="false" />
+    <Property Name="rating" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="booking" Relationship="Self.FK_feedback_booking_id" FromRole="feedback" ToRole="bookings" />
+  </EntityType>
+  <EntityType Name="HouseKeeping_duties">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="room_id" Type="Int32" Nullable="false" />
+    <Property Name="assigned_to" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="issue_reported" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="user" Relationship="Self.FK__HouseKeep__assig__20C1E124" FromRole="HouseKeeping_duties" ToRole="users" />
+    <NavigationProperty Name="room" Relationship="Self.FK__HouseKeep__room___1FCDBCEB" FromRole="HouseKeeping_duties" ToRole="rooms" />
+  </EntityType>
+  <EntityType Name="inventory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="expenses" Relationship="Self.FK__expenses__invent__33D4B598" FromRole="inventory" ToRole="expenses" />
+  </EntityType>
+  <EntityType Name="room">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="bookings" Relationship="Self.FK__bookings__room_i__2C3393D0" FromRole="rooms" ToRole="bookings" />
+    <NavigationProperty Name="HouseKeeping_duties" Relationship="Self.FK__HouseKeep__room___1FCDBCEB" FromRole="rooms" ToRole="HouseKeeping_duties" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="attendances" Relationship="Self.FK__attendanc__marke__5441852A" FromRole="users" ToRole="attendance" />
+    <NavigationProperty Name="attendances1" Relationship="Self.FK__attendanc__user___534D60F1" FromRole="users" ToRole="attendance" />
+    <NavigationProperty Name="bookings" Relationship="Self.FK__bookings__guest___2B3F6F97" FromRole="users" ToRole="bookings" />
+    <NavigationProperty Name="expenses" Relationship="Self.FK__expenses__record__34C8D9D1" FromRole="users" ToRole="expenses" />
+    <NavigationProperty Name="HouseKeeping_duties" Relationship="Self.FK__HouseKeep__assig__20C1E124" FromRole="users" ToRole="HouseKeeping_duties" />
+  </EntityType>
+  <Association Name="FK__attendanc__marke__5441852A">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="attendance" Type="Self.attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="attendance">
+        <PropertyRef Name="marked_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__attendanc__user___534D60F1">
+    <End Role="users" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="attendance" Type="Self.attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="attendance">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bills__booking_i__3A81B327">
+    <End Role="bookings" Type="Self.booking" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="bills" Type="Self.bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bookings">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="bills">
+        <PropertyRef Name="booking_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bookings__guest___2B3F6F97">
+    <End Role="users" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="bookings" Type="Self.booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="bookings">
+        <PropertyRef Name="guest_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bookings__room_i__2C3393D0">
+    <End Role="rooms" Type="Self.room" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="bookings" Type="Self.booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rooms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="bookings">
+        <PropertyRef Name="room_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_feedback_booking_id">
+    <End Role="bookings" Type="Self.booking" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="feedback" Type="Self.feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bookings">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="feedback">
+        <PropertyRef Name="booking_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__expenses__invent__33D4B598">
+    <End Role="inventory" Type="Self.inventory" Multiplicity="0..1" />
+    <End Role="expenses" Type="Self.expens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="expenses">
+        <PropertyRef Name="inventory_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__expenses__record__34C8D9D1">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="expenses" Type="Self.expens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="expenses">
+        <PropertyRef Name="recorded_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HouseKeep__assig__20C1E124">
+    <End Role="users" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HouseKeeping_duties" Type="Self.HouseKeeping_duties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HouseKeeping_duties">
+        <PropertyRef Name="assigned_to" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HouseKeep__room___1FCDBCEB">
+    <End Role="rooms" Type="Self.room" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HouseKeeping_duties" Type="Self.HouseKeeping_duties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rooms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HouseKeeping_duties">
+        <PropertyRef Name="room_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HotelEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="attendances" EntityType="Self.attendance" />
+    <EntitySet Name="bills" EntityType="Self.bill" />
+    <EntitySet Name="bookings" EntityType="Self.booking" />
+    <EntitySet Name="expenses" EntityType="Self.expens" />
+    <EntitySet Name="feedbacks" EntityType="Self.feedback" />
+    <EntitySet Name="HouseKeeping_duties" EntityType="Self.HouseKeeping_duties" />
+    <EntitySet Name="inventories" EntityType="Self.inventory" />
+    <EntitySet Name="rooms" EntityType="Self.room" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK__attendanc__marke__5441852A" Association="Self.FK__attendanc__marke__5441852A">
+      <End Role="users" EntitySet="users" />
+      <End Role="attendance" EntitySet="attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__attendanc__user___534D60F1" Association="Self.FK__attendanc__user___534D60F1">
+      <End Role="users" EntitySet="users" />
+      <End Role="attendance" EntitySet="attendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bills__booking_i__3A81B327" Association="Self.FK__bills__booking_i__3A81B327">
+      <End Role="bookings" EntitySet="bookings" />
+      <End Role="bills" EntitySet="bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bookings__guest___2B3F6F97" Association="Self.FK__bookings__guest___2B3F6F97">
+      <End Role="users" EntitySet="users" />
+      <End Role="bookings" EntitySet="bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bookings__room_i__2C3393D0" Association="Self.FK__bookings__room_i__2C3393D0">
+      <End Role="rooms" EntitySet="rooms" />
+      <End Role="bookings" EntitySet="bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_feedback_booking_id" Association="Self.FK_feedback_booking_id">
+      <End Role="bookings" EntitySet="bookings" />
+      <End Role="feedback" EntitySet="feedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__expenses__invent__33D4B598" Association="Self.FK__expenses__invent__33D4B598">
+      <End Role="inventory" EntitySet="inventories" />
+      <End Role="expenses" EntitySet="expenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__expenses__record__34C8D9D1" Association="Self.FK__expenses__record__34C8D9D1">
+      <End Role="users" EntitySet="users" />
+      <End Role="expenses" EntitySet="expenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HouseKeep__assig__20C1E124" Association="Self.FK__HouseKeep__assig__20C1E124">
+      <End Role="users" EntitySet="users" />
+      <End Role="HouseKeeping_duties" EntitySet="HouseKeeping_duties" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HouseKeep__room___1FCDBCEB" Association="Self.FK__HouseKeep__room___1FCDBCEB">
+      <End Role="rooms" EntitySet="rooms" />
+      <End Role="HouseKeeping_duties" EntitySet="HouseKeeping_duties" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,106 @@
+{
+  "uuid": "0cc475f4-c5dd-4b10-97eb-85c7e6ebbd94",
+  "historyId": "5578f20c8d937b733e7f96b2884ae182",
+  "testCaseId": "bb457dd96c62d2a6a25351f79b6984cb",
+  "fullName": "Project/Features/Login 3/Login UnSuccessful",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Login 3"
+    },
+    {
+      "name": "feature",
+      "value": "Login 3"
+    },
+    {
+      "name": "tag",
+      "value": "mytag"
+    }
+  ],
+  "links": [],
+  "name": "Login UnSuccessful",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that go to url www.demoblaze.com, navigate to the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546268171,
+      "stop": 1749546271340
+    },
+    {
+      "name": "Given enter correct username and wrong password",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546271351,
+      "stop": 1749546271555
+    },
+    {
+      "name": "When User clicks the Login Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546271557,
+      "stop": 1749546271846
+    },
+    {
+      "name": "Then user should see a alert box saying Wrong Password.",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546271849,
+      "stop": 1749546275537
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546268159,
+  "stop": 1749546275546
+}

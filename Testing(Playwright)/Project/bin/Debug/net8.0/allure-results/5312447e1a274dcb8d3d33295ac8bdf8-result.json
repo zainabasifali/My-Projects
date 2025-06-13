@@ -1,0 +1,67 @@
+{
+  "uuid": "c365871d-bc87-4ee2-9343-a35d95035ddc",
+  "historyId": "790daa6a13927bf20eb998096134031c",
+  "testCaseId": "d73b39163a55c48bfa278aed3c88bae6",
+  "fullName": "Project:Project.ApiTesting.ProductGet.ProductGetResponse()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Project.ApiTesting"
+    },
+    {
+      "name": "testMethod",
+      "value": "ProductGetResponse"
+    },
+    {
+      "name": "testClass",
+      "value": "ProductGet"
+    }
+  ],
+  "links": [],
+  "name": "ProductGetResponse",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "ProductGetResponse",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749640506428,
+      "stop": 1749640522248
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "7a678cc5-e29a-462c-bae9-87d41459834a-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1749640506411,
+  "stop": 1749640522263
+}

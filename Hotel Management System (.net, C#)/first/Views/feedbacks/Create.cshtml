@@ -1,0 +1,67 @@
+﻿@model first.Models.feedback
+
+@{
+    ViewBag.Title = "Give Feedback";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<h2>Give Feedback for Booking @Model.booking_id</h2>
+
+@using (Html.BeginForm("Create", "feedbacks", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.booking_id)
+
+    <div class="form-group">
+        <label>Rating:</label>
+        <div class="star-rating">
+            <!-- Stars from 5 down to 1 -->
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1">&#9733;</label>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="message">Message:</label>
+        @Html.TextAreaFor(m => m.message, new { @class = "form-control", rows = 4, required = "required" })
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Submit Feedback</button>
+    @Html.ActionLink("Cancel", "GuestIndex", null, new { @class = "btn btn-secondary ml-2" })
+}
+
+<style>
+    .star-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2.5rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+            .star-rating label:hover,
+            .star-rating label:hover ~ label {
+                color: #deb217;
+            }
+
+        .star-rating input[type="radio"]:checked ~ label {
+            color: #ccc; /* Reset in case it applies wrongly */
+        }
+
+        .star-rating input[type="radio"]:checked + label,
+        .star-rating input[type="radio"]:checked + label ~ label {
+            color: #ffc700;
+        }
+</style>

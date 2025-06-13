@@ -1,0 +1,140 @@
+﻿@{
+    var userName = Session["Username"] as string;
+    var loginTime = Session["LoginTime"] as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Admin Panel</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding-bottom: 60px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .navbar {
+            background-color: #004d40 !important;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff !important;
+        }
+
+        .navbar-text {
+            color: #fff !important;
+        }
+
+        .btn-outline-light {
+            color: #fff;
+            border-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-light:hover {
+                background-color: #fff;
+                color: #004d40;
+                border-color: #fff;
+            }
+
+        .sidebar {
+            background-color: #e9ecef;
+            border-right: 1px solid #dee2e6;
+            padding-top: 20px;
+            min-height: calc(100vh - 56px);
+        }
+
+        .nav-item .nav-link {
+            color: #004d40 !important;
+            padding: 0.75rem 1.25rem;
+            transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+        }
+
+            .nav-item .nav-link:hover, .nav-item .nav-link.active {
+                background-color: #00695c !important;
+                color: #fff !important;
+                border-radius: 0.25rem;
+            }
+
+        .content-area {
+            padding: 20px;
+        }
+
+        .page-title {
+            color: #004d40;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #00695c;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer {
+            background-color: #004d40 !important;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <nav class="navbar navbar-expand">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("AdminIndex", "home")">Admin Panel</a>
+            <div class="d-flex align-items-center">
+                <span class="navbar-text text-white me-3">
+                    Welcome, @userName | Logged in at: @loginTime
+                </span>
+                <a class="btn btn-outline-light" href="@Url.Action("Logout", "Account")">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg-light sidebar p-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="@Url.Action("AdminIndex", "home")">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "users")">Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "rooms")">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("AdminIndex", "bookings")">Bookings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "attendances")">Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "inventories")">Inventories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "expens")">Expenses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("AdminIndex", "bills")">Bills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "feedbacks")">Feedbacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "HouseKeeping_duties")">Assign Duties</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-10 content-area p-4">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer p-3 mt-4">
+        &copy; @DateTime.Now.Year Hotel Management System - Admin Panel
+    </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

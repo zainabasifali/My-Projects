@@ -1,0 +1,10 @@
+﻿.btnColor {
+    background-color: #004d40 !important;
+    color: white;
+}
+
+.btnColor: hover {
+color: white;
+    background - color: #00695c !important;
+    transform: scale(1.05);
+}

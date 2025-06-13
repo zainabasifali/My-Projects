@@ -1,0 +1,100 @@
+﻿@model first.Models.BillView
+
+@{
+    string userRole = null;
+    string guestName = null;
+
+    if (Session["UserRole"] != null && Session["username"] != null)
+    {
+        userRole = Session["UserRole"].ToString();
+        guestName = Session["Username"].ToString();
+    }
+
+    ViewBag.Title = "Bill Details";
+    if (userRole != null && userRole == "Admin")
+    {
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_GuestLayout.cshtml";
+    }
+}
+
+<style>
+    .btnColor {
+        background-color: #004d40 !important;
+        color: white;
+    }
+
+        .btnColor:hover {
+            color: white;
+            background-color: #00695c !important;
+            transform: scale(1.05);
+        }
+</style>
+
+<div class="container my-5">
+    <div class="card shadow p-4">
+        <div class="d-flex justify-content-between mb-4">
+            <div>
+                <h2 class="mb-0">Hotel Invoice</h2>
+                <small class="text-muted">Generated on: @(Model.generated_at.HasValue ? Model.generated_at.Value.ToString("f") : "-")</small>
+            </div>
+            <div class="text-end">
+                <h5 class="mb-1">Invoice ID: #@Model.id</h5>
+                <h6 class="text-muted">Booking ID: @Model.booking_id</h6>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h5>Guest Information</h5>
+                <p class="mb-1"><strong>Name:</strong> @Model.name</p>
+            </div>
+        </div>
+
+        <h5 class="mt-4">Billing Summary</h5>
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Description</th>
+                    <th class="text-end">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Room Charges</td>
+                    <td class="text-end">@Model.room_charges.ToString("C")</td>
+                </tr>
+                <tr>
+                    <td>Other Charges</td>
+                    <td class="text-end">
+                        @(Model.other_charges.HasValue ? Model.other_charges.Value.ToString("C") : "₹0.00")
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total Amount</th>
+                    <th class="text-end text-success">@Model.total_amount.ToString("C")</th>
+                </tr>
+            </tfoot>
+        </table>
+        @if (userRole == "Admin")
+        {
+            <div class="text-end">
+                @Html.ActionLink("Back to List", "AdminIndex", "Bookings", null, new { @class = "btn btnColor mt-3" })
+            </div>
+        }
+        else
+        {
+            <div class="text-end">
+                @Html.ActionLink("Pay Now", "PayBill", new { id = Model.id }, new { @class = "btn btnColor mt-3" })
+                </div>
+
+                }
+            </div>
+        </div>

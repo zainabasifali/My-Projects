@@ -1,0 +1,151 @@
+﻿@model IEnumerable<first.Models.bill>
+
+@{
+    ViewBag.Title = "GuestIndex";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<style>
+    .bill-card {
+        margin-bottom: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .bill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+    .card-header-bill {
+        padding: 18px 20px;
+        border-bottom: 1px solid #b2dfdb;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bill-id {
+        margin-bottom: 0;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .pay-button {
+        background-color: #00897b !important; 
+        color: white !important;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+        text-decoration: none;
+        font-size: 1rem;
+        min-width: 110px;
+        text-align: center;
+        display: inline-block;
+    }
+
+        .pay-button:hover {
+            background-color: #00695c !important;
+            transform: scale(1.03);
+        }
+
+    .card-body-bill {
+        padding: 20px;
+        background-color: white;
+    }
+
+    .bill-detail {
+        margin-bottom: 10px;
+        color: #546e7a; 
+        font-size: 1.05rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .bill-detail strong {
+            font-weight: 600;
+            color: #263238; 
+        }
+
+    .bill-status-container {
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px solid #cfd8dc; 
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .bill-status-label {
+        font-weight: bold;
+        margin-right: 10px;
+        color: #455a64; 
+    }
+
+    .status-pill {
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .paid {
+        background-color: #c8e6c9;  
+        color: #388e3c; 
+    }
+
+    .unpaid {
+        background-color: #ffcdd2; 
+        color: #d32f2f;
+    }
+</style>
+
+<h2>My Bills</h2>
+
+<div class="row row-cols-1 g-4">
+    @foreach (var bill in Model)
+    {
+        <div class="col">
+            <div class="bill-card">
+                <div class="card-header-bill">
+                    <h5 class="bill-id">Bill #@bill.id</h5>
+                    @Html.ActionLink("Pay Now", "Details", new { id = bill.id }, new { @class = "pay-button" })
+                </div>
+                <div class="card-body-bill">
+                    <div class="bill-detail">
+                        <strong>Room Charges:</strong>
+                        <span>@bill.room_charges</span>
+                    </div>
+                    <div class="bill-detail">
+                        <strong>Other Charges:</strong>
+                        <span>@(bill.other_charges)</span>
+                    </div>
+                    <div class="bill-detail">
+                        <strong>Total Amount:</strong>
+                        <span>@bill.total_amount</span>
+                    </div>
+                    <div class="bill-detail">
+                        <strong>Generated At:</strong>
+                        <span>@bill.generated_at</span>
+                    </div>
+                    <div class="bill-status-container">
+                        <span class="bill-status-label">Status:</span>
+                        @if (bill.status.ToLower() == "paid")
+                        {
+                            <span class="status-pill paid">@bill.status</span>
+                        }
+                        else
+                        {
+                            <span class="status-pill unpaid">@bill.status</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

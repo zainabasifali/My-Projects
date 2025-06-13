@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelModelStoreContainer" CdmEntityContainer="HotelEntities1">
+    <EntitySetMapping Name="attendances">
+      <EntityTypeMapping TypeName="HotelModel.attendance">
+        <MappingFragment StoreEntitySet="attendance">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="marked_by" ColumnName="marked_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bills">
+      <EntityTypeMapping TypeName="HotelModel.bill">
+        <MappingFragment StoreEntitySet="bills">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+          <ScalarProperty Name="room_charges" ColumnName="room_charges" />
+          <ScalarProperty Name="other_charges" ColumnName="other_charges" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="generated_at" ColumnName="generated_at" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bookings">
+      <EntityTypeMapping TypeName="HotelModel.booking">
+        <MappingFragment StoreEntitySet="bookings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guest_id" ColumnName="guest_id" />
+          <ScalarProperty Name="room_id" ColumnName="room_id" />
+          <ScalarProperty Name="check_in" ColumnName="check_in" />
+          <ScalarProperty Name="check_out" ColumnName="check_out" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="expenses">
+      <EntityTypeMapping TypeName="HotelModel.expens">
+        <MappingFragment StoreEntitySet="expenses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="inventory_id" ColumnName="inventory_id" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="expense_date" ColumnName="expense_date" />
+          <ScalarProperty Name="recorded_by" ColumnName="recorded_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedbacks">
+      <EntityTypeMapping TypeName="HotelModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseKeeping_duties">
+      <EntityTypeMapping TypeName="HotelModel.HouseKeeping_duties">
+        <MappingFragment StoreEntitySet="HouseKeeping_duties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="room_id" ColumnName="room_id" />
+          <ScalarProperty Name="assigned_to" ColumnName="assigned_to" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="issue_reported" ColumnName="issue_reported" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventories">
+      <EntityTypeMapping TypeName="HotelModel.inventory">
+        <MappingFragment StoreEntitySet="inventory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rooms">
+      <EntityTypeMapping TypeName="HotelModel.room">
+        <MappingFragment StoreEntitySet="rooms">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="HotelModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,12 @@
+{
+  "uuid": "ca73dbca-c990-4a99-85cc-490fc3557837",
+  "name": "Project.ApiTesting.ProductDelete.ProductDeleteResponse",
+  "children": [
+    "244b4f58-6a20-42af-99f4-015b520be04d"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1749646706378,
+  "stop": 1749646709252
+}

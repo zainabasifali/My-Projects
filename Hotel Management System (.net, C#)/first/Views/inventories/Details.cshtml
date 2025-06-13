@@ -1,0 +1,70 @@
+﻿@model first.Models.inventory
+
+@{
+    string userRole = null;
+    string guestName = null;
+
+    if (Session["UserRole"] != null && Session["username"] != null)
+    {
+        userRole = Session["UserRole"].ToString();
+        guestName = Session["Username"].ToString();
+    }
+
+    ViewBag.Title = "Details";
+    if (userRole != null && userRole == "Admin")
+    {
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_StaffLayout.cshtml";
+    }
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Inventory Details</h2>
+        <div>
+            @if (userRole == "Admin")
+            {
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary rounded" })
+
+            }
+            else
+            {
+                @Html.ActionLink("Back to List", "StaffIndex", null, new { @class = "btn btn-secondary rounded" })
+
+            }
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Inventory Information</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.name)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.name)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.category)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.category)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.quantity)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.quantity)
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

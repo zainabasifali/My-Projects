@@ -1,0 +1,106 @@
+{
+  "uuid": "6f9436a8-6a85-4f92-a9f6-57e2712efd0e",
+  "historyId": "b26303638f86fbd161846a61ed261048",
+  "testCaseId": "35a6d479b6997a7cf9e9e624412069b9",
+  "fullName": "Project/Features/Login 2/Login UnSuccessful",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Login 2"
+    },
+    {
+      "name": "feature",
+      "value": "Login 2"
+    },
+    {
+      "name": "tag",
+      "value": "mytag"
+    }
+  ],
+  "links": [],
+  "name": "Login UnSuccessful",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that go to url demoblaze.com, navigate to the login page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749647146696,
+      "stop": 1749647148540
+    },
+    {
+      "name": "Given enter wrong username and correct password",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749647148545,
+      "stop": 1749647149020
+    },
+    {
+      "name": "When user click the login button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749647149023,
+      "stop": 1749647149144
+    },
+    {
+      "name": "Then user should see a alert box saying User does not exist.",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749647149154,
+      "stop": 1749647152702
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749647146685,
+  "stop": 1749647152714
+}

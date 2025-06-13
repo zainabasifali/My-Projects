@@ -1,0 +1,73 @@
+﻿@model first.Models.expens
+
+@{
+    ViewBag.Title = "Expense Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Expense Details</h2>
+        <div>
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary rounded" })
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Expense Information</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.category)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.category)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.item_name)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.item_name)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.description)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.description)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.amount)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.amount)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.expense_date)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.expense_date)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.inventory.name)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.inventory.name)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.user.name)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.user.name)
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+{
+  "uuid": "bcb805d7-3b49-4c11-b0ee-c4d51912bfea",
+  "historyId": "ae3721a5664d8f5b349c3207c2ef6e84",
+  "testCaseId": "b5e1436757eb3166a91f8a1d24ab233d",
+  "fullName": "Project/Features/CategoryNavigation/Navigate to a specific category",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.CategoryNavigation"
+    },
+    {
+      "name": "feature",
+      "value": "CategoryNavigation"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "Navigate to a specific category",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that the user is on the homepage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546649210,
+      "stop": 1749546649250
+    },
+    {
+      "name": "When the user clicks on the Laptops category",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546649254,
+      "stop": 1749546653692
+    },
+    {
+      "name": "Then the user should see a list of products in the Laptops category",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546653697,
+      "stop": 1749546656603
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546649200,
+  "stop": 1749546656612
+}

@@ -1,0 +1,60 @@
+﻿@model first.Models.HouseKeeping_duties
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Housekeeping Duty Details</h2>
+        <div>
+          
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary rounded" })
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Duty Information</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.status)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.status)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.issue_reported)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.issue_reported)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    @Html.DisplayNameFor(model => model.date)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.date)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    Assigned Staff
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.user.name)
+                </dd>
+
+                <dt class="col-sm-3 fw-semibold">
+                    Room Number
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.room.number)
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

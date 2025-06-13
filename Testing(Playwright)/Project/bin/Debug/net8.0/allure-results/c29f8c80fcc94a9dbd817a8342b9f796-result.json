@@ -1,0 +1,115 @@
+{
+  "uuid": "ff3d856b-b63d-49a4-a7b9-a06b68fa5eb8",
+  "historyId": "edaaa54147eec86db3930caaa2ea7c59",
+  "testCaseId": "b11ceef09db73b872ecfa088e1f5b65b",
+  "fullName": "Project/Features/SignUp4/SignUp UnSuccessful",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.SignUp4"
+    },
+    {
+      "name": "feature",
+      "value": "SignUp4"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "SignUp UnSuccessful",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"#sign-username\")\n    - locator resolved to <input type=\"text\" id=\"sign-username\" class=\"form-control\"/>\n    - fill(\"zohair\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms",
+    "trace": "System.TimeoutException: Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"#sign-username\")\n    - locator resolved to <input type=\"text\" id=\"sign-username\" class=\"form-control\"/>\n    - fill(\"zohair\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\r\n   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206\r\n   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 535\r\n   at Project.StepDefinitions.SignUp4StepDefinitions.GivenEnterUsernameAndKeepPasswordEmpty() in C:\\Users\\zaina\\Desktop\\Project\\Project\\StepDefinitions\\SignUp4StepDefinitions.cs:line 40\r\n   at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)\r\n   at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)\r\n   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()\r\n   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()\r\n   at Allure.ReqnrollPlugin.SelectiveRun.TestPlanAwareTestRunner.CollectScenarioErrorsAsync()\r\n   at Project.Features.SignUp4Feature.ScenarioCleanupAsync()\r\n   at Project.Features.SignUp4Feature.SignUpUnSuccessful() in C:\\Users\\zaina\\Desktop\\Project\\Project\\Features\\SignUp4.feature:line 8\r\n   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()\r\n   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)\r\n   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)\r\n   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)\r\n   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)\r\n   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()\r\n   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that go to Url www.Demoblaze.com, navigate to SignUp page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546917685,
+      "stop": 1749546919008
+    },
+    {
+      "name": "Given enter username and keep password empty",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"#sign-username\")\n    - locator resolved to <input type=\"text\" id=\"sign-username\" class=\"form-control\"/>\n    - fill(\"zohair\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms",
+        "trace": "System.TimeoutException: Timeout 30000ms exceeded.\nCall log:\n  - waiting for Locator(\"#sign-username\")\n    - locator resolved to <input type=\"text\" id=\"sign-username\" class=\"form-control\"/>\n    - fill(\"zohair\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not visible\n    - retrying fill action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and editable\n       - element is not visible\n     - retrying fill action\n       - waiting 500ms\r\n   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206\r\n   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 535\r\n   at Project.StepDefinitions.SignUp4StepDefinitions.GivenEnterUsernameAndKeepPasswordEmpty() in C:\\Users\\zaina\\Desktop\\Project\\Project\\StepDefinitions\\SignUp4StepDefinitions.cs:line 40\r\n   at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)\r\n   at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)\r\n   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546919018,
+      "stop": 1749546949062
+    },
+    {
+      "name": "When user click on Signup Button",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546949064,
+      "stop": 1749546949073
+    },
+    {
+      "name": "Then user should see Fill in all the fields",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546949075,
+      "stop": 1749546949075
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546917673,
+  "stop": 1749546949093
+}

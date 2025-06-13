@@ -1,0 +1,67 @@
+{
+  "uuid": "6387f562-a61e-4c09-9605-3fe0247d8406",
+  "historyId": "6de0a52a31026bb0cfb1d0989b5f5b09",
+  "testCaseId": "1cedd2e42adbd87793e2e78ab2adc439",
+  "fullName": "Project:Project.LoadTesting.LoadPurchaseTest.Test01()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "Project.LoadTesting"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test01"
+    },
+    {
+      "name": "testClass",
+      "value": "LoadPurchaseTest"
+    }
+  ],
+  "links": [],
+  "name": "Test01",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Test01",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749547146325,
+      "stop": 1749547219739
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "e0aa62a4-640b-4f7c-ac7d-41725322eed4-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1749547146284,
+  "stop": 1749547219747
+}

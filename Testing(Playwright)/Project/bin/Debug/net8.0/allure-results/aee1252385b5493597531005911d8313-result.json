@@ -1,0 +1,121 @@
+{
+  "uuid": "32989425-9596-4213-809e-bc9547bddbc5",
+  "historyId": "a3804e9ded0aa9e17efad984fab3c0b4",
+  "testCaseId": "24d0e00d9e370ae58063c93b6a170cee",
+  "fullName": "Project/Features/Purchase1/Purchase Successfull",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Purchase1"
+    },
+    {
+      "name": "feature",
+      "value": "Purchase1"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "Purchase Successfull",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given user will navigate to demoblaze website",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546350610,
+      "stop": 1749546352079
+    },
+    {
+      "name": "Given user will add product to cart and navigate to cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546352083,
+      "stop": 1749546359331
+    },
+    {
+      "name": "Given user will click on place order",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546359333,
+      "stop": 1749546359391
+    },
+    {
+      "name": "When user will fill the purchase form",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546359396,
+      "stop": 1749546363090
+    },
+    {
+      "name": "Then user will see the confirm message",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546363095,
+      "stop": 1749546363130
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546350599,
+  "stop": 1749546363139
+}

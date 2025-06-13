@@ -1,0 +1,156 @@
+{
+  "uuid": "1fe0c485-a287-416b-ad19-152f71cd5bcf",
+  "historyId": "bc011cc8fde493d1b3d0ee743994d97b",
+  "testCaseId": "c73118bb277771591c84a6249c53c805",
+  "fullName": "Project/Features/DeleteProductFromCart/Add a product to the cart and remove it",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.DeleteProductFromCart"
+    },
+    {
+      "name": "feature",
+      "value": "DeleteProductFromCart"
+    }
+  ],
+  "links": [],
+  "name": "Add a product to the cart and remove it",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Product 'Samsung galaxy s6' is still visible in the cart.\r\n  Expected: False\r\n  But was:  True\r\n",
+    "trace": "NUnit.Framework.AssertionException:   Product 'Samsung galaxy s6' is still visible in the cart.\r\n  Expected: False\r\n  But was:  True\r\n\r\n   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsFalse(Boolean condition, String message, Object[] args)\r\n   at Project.StepDefinitions.DeleteProductFromCart.ThenTheProductWithSameNameNoLongerVisibleInTheCart() in C:\\Users\\zaina\\Desktop\\Project\\Project\\StepDefinitions\\DeleteProductFromCartStepDefinitions.cs:line 74\r\n   at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)\r\n   at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)\r\n   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()\r\n   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()\r\n   at Allure.ReqnrollPlugin.SelectiveRun.TestPlanAwareTestRunner.CollectScenarioErrorsAsync()\r\n   at Project.Features.DeleteProductFromCartFeature.ScenarioCleanupAsync()\r\n   at Project.Features.DeleteProductFromCartFeature.AddAProductToTheCartAndRemoveIt() in C:\\Users\\zaina\\Desktop\\Project\\Project\\Features\\DeleteProductFromCart.feature:line 10\r\n   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()\r\n   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)\r\n   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)\r\n   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)\r\n   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)\r\n   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()\r\n   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given the User is on the homepage",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546721678,
+      "stop": 1749546723474
+    },
+    {
+      "name": "When the user clicks on the product",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546723477,
+      "stop": 1749546726662
+    },
+    {
+      "name": "When the user clicks the Add to cart button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546726667,
+      "stop": 1749546728129
+    },
+    {
+      "name": "When accepts the alert popup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546728142,
+      "stop": 1749546730156
+    },
+    {
+      "name": "When the user navigates to the cart page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546730156,
+      "stop": 1749546730719
+    },
+    {
+      "name": "When the user deletes the added product from the cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546730719,
+      "stop": 1749546735685
+    },
+    {
+      "name": "Then the product with same name no longer visible in the cart",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Product 'Samsung galaxy s6' is still visible in the cart.\r\n  Expected: False\r\n  But was:  True\r\n",
+        "trace": "NUnit.Framework.AssertionException:   Product 'Samsung galaxy s6' is still visible in the cart.\r\n  Expected: False\r\n  But was:  True\r\n\r\n   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsFalse(Boolean condition, String message, Object[] args)\r\n   at Project.StepDefinitions.DeleteProductFromCart.ThenTheProductWithSameNameNoLongerVisibleInTheCart() in C:\\Users\\zaina\\Desktop\\Project\\Project\\StepDefinitions\\DeleteProductFromCartStepDefinitions.cs:line 74\r\n   at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)\r\n   at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)\r\n   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546735687,
+      "stop": 1749546735755
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546721665,
+  "stop": 1749546735769
+}

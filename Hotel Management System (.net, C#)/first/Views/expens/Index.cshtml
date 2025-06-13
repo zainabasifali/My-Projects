@@ -1,0 +1,71 @@
+﻿@model IEnumerable<first.Models.expens>
+
+@{
+    ViewBag.Title = "Expenses";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .btnColor {
+        background-color: #004d40 !important;
+        color: white;
+    }
+
+        .btnColor:hover {
+            color: white;
+            background-color: #00695c !important;
+            transform: scale(1.05);
+        }
+</style>
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Expenses</h2>
+        <p class="mb-0">
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btnColor" })
+        </p>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.category)</th>
+                        <th>@Html.DisplayNameFor(model => model.item_name)</th>
+                        <th>@Html.DisplayNameFor(model => model.description)</th>
+                        <th>@Html.DisplayNameFor(model => model.amount)</th>
+                        <th>@Html.DisplayNameFor(model => model.expense_date)</th>
+                        <th>@Html.DisplayNameFor(model => model.inventory.name)</th>
+                        <th>@Html.DisplayNameFor(model => model.user.name)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.category)</td>
+                            <td>@Html.DisplayFor(modelItem => item.item_name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.description)</td>
+                            <td>@Html.DisplayFor(modelItem => item.amount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.expense_date)</td>
+                            <td>@Html.DisplayFor(modelItem => item.inventory.name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.user.name)</td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-sm btn-primary me-1" })
+                                @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-sm btn-primary me-1" })
+                                @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-sm btn-danger" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <p class="alert alert-info">No expenses found.</p>
+    }
+</div>

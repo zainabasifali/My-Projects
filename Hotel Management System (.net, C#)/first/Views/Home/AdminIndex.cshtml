@@ -1,0 +1,190 @@
+﻿@{
+    ViewBag.Title = "AdminIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@* Include Chart.js library *@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="jumbotron bg-light rounded shadow-sm p-4">
+            <h1 class="display-4 text-success">Welcome to the Admin Dashboard!</h1>
+            <p class="lead">Your central hub for managing the hotel system.</p>
+            <hr class="my-4">
+            <p>Get a quick glance at key metrics and access important sections.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="card border-left-warning shadow-sm rounded">
+            <div class="card-body">
+                <h5>Confirmed Bookings</h5>
+                <canvas id="bookingChart"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-6 d-flex flex-column justify-content-center gap-3">
+
+
+        <div class="card shadow-sm border-start border-4 border-warning w-100">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <div>
+                    <h5 class="card-title text-warning">Pending Bookings</h5>
+                    <a href="@Url.Action("AdminIndex", "bookings")" class="btn btn-warning mt-2">View All Bookings</a>
+                </div>
+                <div>
+                    <h1 class="card-text">@ViewBag.PendingBookingCount</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm border-start border-4 border-danger w-100">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <div>
+                    <h5 class="card-title text-danger">Cancelled Bookings</h5>
+                    <a href="@Url.Action("AdminIndex", "bookings")" class="btn btn-danger mt-2">View All Bookings</a>
+                </div>
+                <div>
+                    <h1 class="card-text">@ViewBag.CancelledBookingCount</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="row mt-4">
+
+    <!-- Left Column -->
+    <div class="col-md-6">
+        <div class="card shadow-sm border-start border-4 border-danger" style="min-height: 250px;">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-danger">Low Stock Inventory</h5>
+
+                @if (ViewBag.LowStockInventory != null && ViewBag.LowStockInventory.Count > 0)
+                {
+                    <table class="table table-sm table-striped mt-3">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.LowStockInventory)
+                            {
+                                <tr>
+                                    <td>@item.name</td>
+                                    <td>@item.category</td>
+                                    <td>@item.quantity</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="text-muted mt-2">All inventory items are sufficiently stocked.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-6">
+        <div class="card shadow-sm border-4 " style="min-height: 250px; border-color: #004d40">
+            <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
+                <h5 class="card-title">Room Booking Status</h5>
+
+                <div style="width: 120px; height: 120px;">
+                    <canvas id="roomChart" width="120" height="120"></canvas>
+                </div>
+
+                <p class="mt-3 mb-0">
+                    <strong>@ViewBag.BookedRooms</strong> out of <strong>@ViewBag.TotalRooms</strong> rooms booked
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('roomChart').getContext('2d');
+    var bookedRooms = @ViewBag.BookedRooms;
+    var totalRooms = @ViewBag.TotalRooms;
+    var availableRooms = totalRooms - bookedRooms;
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Booked', 'Available'],
+            datasets: [{
+                data: [bookedRooms, availableRooms],
+                backgroundColor: ['#004d40', '#e9ecef'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            cutout: '70%',
+            responsive: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            var label = context.label || '';
+                            var value = context.parsed;
+                            return `${label}: ${value}`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+
+
+<script>
+
+    fetch('@Url.Action("BookingStats", "Home")')
+        .then(res => res.json())
+        .then(data => {
+            const labels = data.map(d => d.Month);
+            const counts = data.map(d => d.Count);
+
+            new Chart(document.getElementById("bookingChart"), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Confirmed Bookings',
+                        data: counts,
+                        backgroundColor: '#004d40'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0
+                        }
+                    }
+                }
+            });
+        });
+</script>

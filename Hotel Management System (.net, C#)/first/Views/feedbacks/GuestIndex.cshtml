@@ -1,0 +1,47 @@
+﻿@model IEnumerable<first.Models.feedback>
+
+@{
+    ViewBag.Title = "My Feedbacks";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">My Feedbacks</h2>
+        <a href="@Url.Action("PendingFeedbacks", "feedbacks")" class="btn btnColor">
+            View Pending Feedbacks
+        </a>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body d-flex flex-column">
+                       <h5 class="card-title text-primary">
+                           Rating:
+                           @for (int i = 0; i < item.rating; i++)
+                           {
+                               <span>⭐</span>
+                           }
+                       </h5>
+                        <p class="card-text mb-2">
+                            <strong>Message:</strong><br />
+                            @Html.DisplayFor(modelItem => item.message)
+                        </p>
+                        <p class="text-muted mb-1">
+                            <strong>Submitted:</strong> @Html.DisplayFor(modelItem => item.created_at)
+                        </p>
+                        <p class="text-muted mb-3">
+                            <strong>Booking Status:</strong> @Html.DisplayFor(modelItem => item.booking.status)
+                        </p>
+                        <div class="mt-auto">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-sm btn-outline-primary w-100" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

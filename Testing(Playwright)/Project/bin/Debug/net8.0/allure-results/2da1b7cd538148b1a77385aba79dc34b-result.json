@@ -1,0 +1,136 @@
+{
+  "uuid": "977b79d2-c8a6-4f75-bbe3-c1a7e98503ac",
+  "historyId": "25b5d0d17827517438d367f865718c6d",
+  "testCaseId": "e56f95437b60840c46f6a244517fa11e",
+  "fullName": "Project/Features/TotalAmountCalculation/Correct Total amount calculated after order confirmation",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.TotalAmountCalculation"
+    },
+    {
+      "name": "feature",
+      "value": "TotalAmountCalculation"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "Correct Total amount calculated after order confirmation",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given the user goes to demoblaze website",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546508723,
+      "stop": 1749546512580
+    },
+    {
+      "name": "Given adds multiple products to cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546512582,
+      "stop": 1749546519516
+    },
+    {
+      "name": "Given clicks on cart nav",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546519522,
+      "stop": 1749546523188
+    },
+    {
+      "name": "Given clics on place order",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546523188,
+      "stop": 1749546523246
+    },
+    {
+      "name": "When Fills the purchase form correctly",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546523250,
+      "stop": 1749546526768
+    },
+    {
+      "name": "Then the user should see the corect amount on the order confirmation card",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546526771,
+      "stop": 1749546526806
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546508714,
+  "stop": 1749546526814
+}

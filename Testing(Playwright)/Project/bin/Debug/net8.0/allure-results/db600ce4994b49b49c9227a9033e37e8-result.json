@@ -1,0 +1,87 @@
+{
+  "uuid": "a28d9146-a6fb-4747-a1be-afa1cdc8809c",
+  "historyId": "dcef6ffa3a4c80f445b7dd87f6549288",
+  "testCaseId": "01ebb076ff1d4c0f0ca48c2cd0a4fe14",
+  "fullName": "Project/Features/User logout/User logs out successfully",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.User logout"
+    },
+    {
+      "name": "feature",
+      "value": "User logout"
+    }
+  ],
+  "links": [],
+  "name": "User logs out successfully",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given the user is logged in",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546543447,
+      "stop": 1749546560957
+    },
+    {
+      "name": "When the user clicks the button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546560963,
+      "stop": 1749546561287
+    },
+    {
+      "name": "Then the login username should not be visible",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546561291,
+      "stop": 1749546561378
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546543431,
+  "stop": 1749546561387
+}

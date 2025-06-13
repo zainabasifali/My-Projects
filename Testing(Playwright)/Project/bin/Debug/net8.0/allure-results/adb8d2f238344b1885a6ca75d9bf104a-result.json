@@ -1,0 +1,106 @@
+{
+  "uuid": "a29ef661-ff15-46a5-bc0d-741b48cd5f1e",
+  "historyId": "b6892d4ed4d1a5267bf0a7b73bde0d11",
+  "testCaseId": "ed8e684b9408edf18b68e9cd5f8634d6",
+  "fullName": "Project/Features/SignUp2/SignUp UnSuccessful",
+  "labels": [
+    {
+      "name": "host",
+      "value": "ZAINAB"
+    },
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.SignUp2"
+    },
+    {
+      "name": "feature",
+      "value": "SignUp2"
+    },
+    {
+      "name": "tag",
+      "value": "tag1"
+    }
+  ],
+  "links": [],
+  "name": "SignUp UnSuccessful",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given that go to Url www.demoblaze.com, navigate to SignUp page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546813720,
+      "stop": 1749546818415
+    },
+    {
+      "name": "Given fill existing username & valid password",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546818418,
+      "stop": 1749546818656
+    },
+    {
+      "name": "When user clicks on Signup button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546818660,
+      "stop": 1749546818942
+    },
+    {
+      "name": "Then user should see user already exist alert",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1749546818944,
+      "stop": 1749546824261
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749546813712,
+  "stop": 1749546824270
+}

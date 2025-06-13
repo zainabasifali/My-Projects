@@ -1,0 +1,92 @@
+﻿@model IEnumerable<first.Models.attendance>
+
+@{
+    ViewBag.Title = "Attendance Log";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Attendance Log</h2>
+        @using (Html.BeginForm("MarkAllAbsent", "attendances", FormMethod.Post, new { @class = "d-inline" }))
+        {
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to mark all unmarked attendances as absent?')">
+                Mark all as Absent
+            </button>
+        }
+    </div>
+
+    <div class="mb-3">
+        @using (Html.BeginForm("AttendanceByDate", "attendances", FormMethod.Get))
+        {
+            <div class="d-flex align-items-center justify-content-center">
+                <label for="date" class="mr-3 mb-0">View attendance for date:</label>
+                <input type="date" id="date" name="date" class="form-control mx-3" style="width: auto;" required />
+                <button type="submit" class="btn btnColor ml-3">View Log</button>
+            </div>
+        }
+    </div>
+
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.date)</th>
+                        <th>@Html.DisplayNameFor(model => model.status)</th>
+                        <th>Staff Name</th>
+                        <th>Marked By</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.date.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                @if (item.user != null)
+                                {
+                                    @item.status
+                                }
+                                else
+                                {
+                                    <span class="text-danger">Not marked yet</span>
+                                }
+                            </td>
+                            <td>@(item.user1.name ?? "<span class='text-muted'>N/A</span>")</td>
+                            <td>
+                                @if (item.user != null)
+                                {
+                                    @item.user.name
+                                }
+                                else
+                                {
+                                    <span class="text-danger">Not marked yet</span>
+                                }
+                            </td>
+                            <td>
+                                @if (item.status == "absent")
+                                {
+                                    using (Html.BeginForm("MarkOnLeave", "attendances", FormMethod.Post))
+                                    {
+                                        @Html.Hidden("id", item.id)
+                                        <button type="submit" class="btn btn-warning btn-sm">
+                                            Mark On Leave
+                                        </button>
+                                    }
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <p class="alert alert-info">No attendance records found.</p>
+    }
+</div>
