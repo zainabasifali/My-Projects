@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'sourcecode';
+    src: url('./Images/SourceCodePro-Medium.ttf');
+}
+
+body {
+    font-family: 'sourcecode';
+}
+.carousel-item img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.sub{
+    background-color:#F2C7E5;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.why-choose-us {
+    background-color: #ffe4f0; 
+    text-align: center;
+    padding: 50px 20px;
+}
+.why-choose-us h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.why-choose-us .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.why-choose-us p {
+    margin: 0;
+    font-size: 16px;
+}
+.why-choose-us img {
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+.custom-img-thumbnail {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-img-thumbnail:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.product-cart:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.button-class{
+    background-color: #F2C7E5;
+    border: none;
+}
+.button-class:hover{
+    background-color: #f76ece;
+    color: white;
+}
+
+@keyframes popAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .review-button {
+    animation: popAnimation 2s infinite ease-in-out;
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+}
+.nav-link .badge {
+    font-size: 0.75rem;
+    padding: 0.3em 0.6em; 
+    transform: translate(-50%, -50%);
+    right: 0; 
+    top: 0; 
+  }
+  
+ 
